@@ -1,0 +1,16 @@
+{
+  "paper": "29sn1uqWn3",
+  "arxiv": "2603.03612",
+  "publication_eligible": true,
+  "tests_passed": true,
+  "publication_gate_passed": true,
+  "claim_count": 5,
+  "checks": {
+    "five_anchored_claims_pass": true,
+    "independent_mechanism_per_claim": true,
+    "negative_control_per_claim": true,
+    "primary_source_audit_present": true,
+    "theory_scope_limitation_explicit": true
+  },
+  "scope": "five source-anchored theory constructions; finite executable checks plus public TeX proof anchors"
+}

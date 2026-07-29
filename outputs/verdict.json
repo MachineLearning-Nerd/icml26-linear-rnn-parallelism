@@ -1,0 +1,127 @@
+{
+  "all_claims_passed": true,
+  "arxiv": "2603.03612",
+  "claims": {
+    "claim_1_lrnn_pnc1": {
+      "instances": 288,
+      "mechanism": "exact recurrence-vs-convolutional-form identity over 288 integer-rational instances",
+      "negative_control": {
+        "false_linear_convolution": 8,
+        "nonlinear_composition": 256
+      },
+      "passed": true,
+      "scope": "finite exact checks of the matrix-product construction; PNC1 membership remains sourced to the public circuit proof.",
+      "source": "Theorem 3 / Section 4 LRNN upper bound"
+    },
+    "claim_2_near_log_depth": {
+      "depth_table": [
+        {
+          "NC_simulation_bound": 1,
+          "balanced_product_depth": 1,
+          "logstar_n": 1,
+          "n": 2,
+          "sequential_depth": 2
+        },
+        {
+          "NC_simulation_bound": 4,
+          "balanced_product_depth": 2,
+          "logstar_n": 2,
+          "n": 3,
+          "sequential_depth": 3
+        },
+        {
+          "NC_simulation_bound": 4,
+          "balanced_product_depth": 2,
+          "logstar_n": 2,
+          "n": 4,
+          "sequential_depth": 4
+        },
+        {
+          "NC_simulation_bound": 9,
+          "balanced_product_depth": 3,
+          "logstar_n": 3,
+          "n": 8,
+          "sequential_depth": 8
+        },
+        {
+          "NC_simulation_bound": 12,
+          "balanced_product_depth": 4,
+          "logstar_n": 3,
+          "n": 16,
+          "sequential_depth": 16
+        },
+        {
+          "NC_simulation_bound": 32,
+          "balanced_product_depth": 8,
+          "logstar_n": 4,
+          "n": 256,
+          "sequential_depth": 256
+        },
+        {
+          "NC_simulation_bound": 64,
+          "balanced_product_depth": 16,
+          "logstar_n": 4,
+          "n": 65536,
+          "sequential_depth": 65536
+        },
+        {
+          "NC_simulation_bound": 160,
+          "balanced_product_depth": 32,
+          "logstar_n": 5,
+          "n": 4294967296,
+          "sequential_depth": 4294967296
+        }
+      ],
+      "four_leaf_tree_depth": 2,
+      "mechanism": "balanced associative matrix-product tree plus exact log-star depth schedule",
+      "negative_control": "left-to-right scan has linear depth, violating the claimed near-log parallel schedule.",
+      "passed": true,
+      "scope": "checks the stated composition mechanism; the PNC1-to-NC simulation theorem is source-audited.",
+      "source": "Corollary 5 / Section 4"
+    },
+    "claim_3_log_precision_connectivity": {
+      "instances": 20034,
+      "mechanism": "exhaustive deterministic sorted-DAG counter scan cross-checked against pointer reachability",
+      "negative_control": {
+        "one_pass_endpoint": 1,
+        "true_target": 2,
+        "unsorted_edges": [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "passed": true,
+      "scope": "finite exact realization of the source counter-machine invariant; L-completeness is supported by the cited FO reduction proof.",
+      "source": "Theorem 2 / Section 3.2 and Appendix E"
+    },
+    "claim_4_poly_precision_barrier": {
+      "mechanism": "literal scalar stack push/head/pop encoding and finite-control round trips",
+      "negative_control": {
+        "depth": 60,
+        "fixed_precision_collision": true
+      },
+      "passed": true,
+      "scope": "validates the author-specified stack encoding; P-completeness and conditional depth lower bound remain theorem-level source claims.",
+      "source": "Theorem 2 / Appendix E poly-precision multi-stack construction"
+    },
+    "claim_5_four_layer_dplr": {
+      "matrix_streams": 100,
+      "mechanism": "18-state alternating-half dot-product overwrite simulation, plus independent WFA path-sum check",
+      "negative_control": {
+        "in_place_overwrite_corrupts_product": true
+      },
+      "passed": true,
+      "scope": "finite exact arithmetic of the published four-layer router+arithmetic construction; architecture realization and PNC1 completeness are source-audited.",
+      "source": "Theorem 5 / Section 5.1 and Appendix D",
+      "wfa_value": -3
+    }
+  },
+  "limitations": "Finite executable traces validate the source constructions and negative controls. Universal complexity-class claims are established by the cited public TeX proofs, not by these finite checks.",
+  "paper": "29sn1uqWn3"
+}
