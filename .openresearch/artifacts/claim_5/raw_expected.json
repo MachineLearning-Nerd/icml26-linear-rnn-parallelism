@@ -1,0 +1,11 @@
+{
+  "claim": 5,
+  "status": "BLOCKED",
+  "routes_completed": 4,
+  "rwkv_status": "verified_with_bos_repair",
+  "deltanet_arithmetic_steps": 694,
+  "deltanet_router_required_period": 1404,
+  "euler_phi_1404": 432,
+  "falsification_succeeded": false,
+  "fixed_command": "uv run python repro/src/verify.py"
+}

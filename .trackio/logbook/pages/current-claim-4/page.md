@@ -106,8 +106,32 @@ negative-control pass exits nonzero.
 
 ## Raw result
 
-Pending this cumulative branch’s terminal run. Exact output, Git SHA,
-allocation, and runtime will be embedded by the next node.
+Run `8f632753-ee79-42cf-9efb-382708f42638` reached `done` at Git SHA
+`9ab28c055ddfc7f84bcb0fbbf83af85723dedff5`.
+
+```json
+{
+  "status": "VERIFIED",
+  "conditional_assumption": "NC != P",
+  "derivation_steps": 7,
+  "reachable_encoding_gap": "1/4",
+  "complete_stack_domain_depth": 14,
+  "complete_stack_count": 32767,
+  "negative_control_smallest_margin": "1/36893488147419103232",
+  "estimated_cores": 1,
+  "selected_flavor": "cpu-upgrade",
+  "logical_cpus": 64,
+  "affinity_cpus": 64,
+  "verifier_runtime_seconds": 7.141739349113777,
+  "job_runtime_seconds": 26
+}
+```
+
+Downloadable records:
+
+- `.openresearch/artifacts/claim_4/raw_run.json`
+- `.openresearch/artifacts/claim_4/checker_output.json`
+- `.openresearch/artifacts/claim_4/negative_control_output.json`
 
 ## Limitations
 
@@ -122,6 +146,6 @@ input token. The circuit consequence remains conditional on `NC != P`.
 | 1 | Current Claim 1 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
 | 2 | Current Claim 2 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
 | 3 | Current Claim 3 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
-| 4 | This page | Yes | Pending terminal run | Pending terminal run | Yes | Yes | Yes | Pending |
+| 4 | This page | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
 | 5 | Historical only | No | No | No | No | Toy only | No | BLOCKED |
 | 6 | None | No | No | No | No | No | No | BLOCKED |

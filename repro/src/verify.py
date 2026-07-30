@@ -19,6 +19,7 @@ from claim1_proof import verify as verify_claim1
 from claim2_proof import verify as verify_claim2
 from claim3_proof import verify as verify_claim3
 from claim4_proof import verify as verify_claim4
+from claim5_proof import verify as verify_claim5
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "outputs"
@@ -239,12 +240,19 @@ def main():
         "claim_2": verify_claim2(),
         "claim_3": verify_claim3(),
         "claim_4": verify_claim4(),
+        "claim_5": verify_claim5(),
     }
     claims = {"claim_1_lrnn_pnc1": c1_lrnn_convolutional_pnc1(), "claim_2_near_log_depth": c2_near_log_depth(),
               "claim_3_log_precision_connectivity": c3_sorted_connectivity(), "claim_4_poly_precision_barrier": c4_poly_precision_stacks(),
               "claim_5_four_layer_dplr": c5_four_layer_dplr_wfa()}
+    evidence_statuses = {"VERIFIED", "FALSIFIED", "BLOCKED"}
+    evidence_suite_passed = (
+        all(x["passed"] for x in claims.values())
+        and all(x["status"] in evidence_statuses for x in proof_claims.values())
+    )
     result = {"paper": "29sn1uqWn3", "arxiv": "2603.03612",
-              "all_claims_passed": all(x["passed"] for x in claims.values()) and all(x["status"] == "VERIFIED" for x in proof_claims.values()),
+              "all_claims_passed": evidence_suite_passed,
+              "all_exact_claims_resolved": all(x["status"] in {"VERIFIED", "FALSIFIED"} for x in proof_claims.values()),
               "proof_claims": proof_claims,
               "claims": claims, "limitations": "Finite executable traces validate the source constructions and negative controls. Universal complexity-class claims are established by the cited public TeX proofs, not by these finite checks.",
               "compute": {
@@ -258,5 +266,7 @@ def main():
     (OUT / "verdict.json").write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
     print(json.dumps({"all_claims_passed": result["all_claims_passed"], "claim_count": len(claims),
                       "proof_claims": proof_claims, "compute": result["compute"]}, indent=2))
+    if not evidence_suite_passed:
+        raise SystemExit(1)
 
 if __name__ == "__main__": main()

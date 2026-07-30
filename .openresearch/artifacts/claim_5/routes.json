@@ -1,0 +1,32 @@
+{
+  "routes": [
+    {
+      "id": "rwkv_exact_architecture",
+      "interpretation": "Use the global BOS token to initialize, then apply one exact DPLR overwrite per data token and complete the final matrix in the readout.",
+      "method": "Algebraically identify every overwrite with an RWKV-7 transition and compare compiled long streams with direct products.",
+      "control": "Removing the BOS initialization loses the first overwrite at N=1.",
+      "conclusion": "Verified after an explicit BOS indexing repair."
+    },
+    {
+      "id": "deltanet_arithmetic_program",
+      "interpretation": "Accept the paper's unrestricted rational beta architecture and isolate its layer-4 arithmetic compiler.",
+      "method": "Reconstruct the three-Householder transvection, eight-step scaled add, and 694-step general 9x9 matrix program.",
+      "control": "Restricting beta to deployed sigmoid ranges excludes beta=2 and arbitrary 1-lambda.",
+      "conclusion": "Arithmetic compiler verified; this does not establish the router."
+    },
+    {
+      "id": "deltanet_router_primary_audit",
+      "interpretation": "Require exact rational arithmetic and the paper's stated two-reflections 2D position cycle.",
+      "method": "Use the cyclotomic degree obstruction for the required period 1404.",
+      "control": "Periods 1,2,3,4,6 are the low-degree cases and do not supply 1404 positions.",
+      "conclusion": "The source router lemma is invalid over Q."
+    },
+    {
+      "id": "falsification_attempt",
+      "interpretation": "Restate the existential theorem over all N and seek an assumption-satisfying counterexample.",
+      "method": "Evaluate the published zero-state first-token schedule at N=1 and audit the rational DeltaNet router.",
+      "control": "A separate BOS initialization repairs RWKV, demonstrating why a broken published schedule is not an impossibility theorem.",
+      "conclusion": "Published constructions are invalid as written; no counterexample rules out every four-layer network, so falsification did not succeed."
+    }
+  ]
+}

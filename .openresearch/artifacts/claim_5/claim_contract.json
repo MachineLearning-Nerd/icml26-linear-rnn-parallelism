@@ -1,0 +1,48 @@
+{
+  "claim_id": 5,
+  "statement": "There exist a four-layer RWKV-7 and a four-layer DeltaNet, over the paper's exact rational architecture definitions, that on every stream of 3x3 matrices over {-1,0,1} output their iterated product at the final position; therefore positivity of entry (0,0) realizes a PNC1-complete language under FO reductions.",
+  "quantifiers": {
+    "existential": [
+      "one fixed four-layer RWKV-7",
+      "one fixed four-layer DeltaNet"
+    ],
+    "universal": [
+      "every number N >= 1 of input matrices",
+      "every length-9N encoding over {-1,0,1}"
+    ],
+    "obligation": "Both networks output all nine exact product entries at the final input position."
+  },
+  "assumptions": [
+    "The global BOS convention may supply one initialization step but must be indexed consistently.",
+    "RWKV-7 uses the exact DPLR transition in Section 2.",
+    "DeltaNet uses H(beta,k)=I-beta kk^T over Q with unrestricted rational beta.",
+    "The first three layers must exactly route position and a fixed finite token window for unbounded N.",
+    "Caussinus et al. Corollary 3.4 supplies GapNC1 completeness of 3x3 iterated multiplication."
+  ],
+  "source": {
+    "archive_url": "https://export.arxiv.org/e-print/2603.03612",
+    "retrieved_at": "2026-07-30",
+    "sha256": "f1078eb9464172f9a941c1dd95354116ae749d64b91ec29947b47a588d2a1f9f",
+    "anchors": [
+      "5-fine-grained.tex:20-71 (problem, completeness, Theorem 5)",
+      "appendix-dplr.tex:68-539 (RWKV construction)",
+      "appendix-dplr.tex:541-1208 (DeltaNet construction)"
+    ],
+    "primary_references": [
+      {
+        "title": "Nondeterministic NC1 Computation",
+        "authors": "Caussinus, McKenzie, Therien, Vollmer",
+        "year": 1998,
+        "doi": "10.1006/jcss.1998.1588"
+      },
+      {
+        "title": "RWKV-7 Goose with Expressive Dynamic State Evolution",
+        "arxiv": "2503.14456"
+      }
+    ]
+  },
+  "verdict_if_completed": "BLOCKED",
+  "blocker": "The DeltaNet proof's two-dimensional rational Householder router cannot realize the required period 1404: a rational 2x2 matrix cannot contain a primitive 1404th root because phi(1404)=432. The paper gives no alternative exact four-layer rational router.",
+  "unblock_requirement": "An exact four-layer DeltaNet construction over Q with a valid unbounded-position router, or a machine-checkable impossibility proof for every such network.",
+  "limitations": "Four materially different routes were completed. RWKV is verified after consistent BOS initialization, and DeltaNet's arithmetic program is verified, but the exact conjunctive theorem remains unresolved. The N=1 source-schedule counterexample invalidates that schedule, not every possible four-layer network, so it is not a valid falsification."
+}
