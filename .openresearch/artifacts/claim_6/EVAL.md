@@ -22,3 +22,12 @@ training result.
 Route 3 requires every corrected-generator label to match reachability, the
 endpoint shortcut to fall below 55% in every tested configuration, and the
 released zero-initialization control to restore 100% shortcut accuracy.
+
+Route 4 restates the exact Figure 2 claim and accepts a falsification only when
+dataset, model row, Figure checkpoint, training protocol, and stochastic-run
+identity all hold. It inventories the immutable release, checks paper/release
+protocol conflicts, rejects all assumption-breaking candidate counterexamples,
+and verifies that a fully identified meta-control would be accepted.
+
+All four routes leave Claim 6 `BLOCKED`: no available evidence has the identity
+needed to verify or falsify Figure 2.

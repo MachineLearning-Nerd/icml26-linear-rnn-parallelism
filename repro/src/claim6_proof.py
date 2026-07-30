@@ -7,6 +7,7 @@ from pathlib import Path
 from claim6_release_audit import check as release_audit
 from claim6_checkpoint_eval import check as checkpoint_evaluation
 from claim6_generator_sensitivity import check as generator_sensitivity
+from claim6_falsification import check as falsification
 
 ROOT = Path(__file__).resolve().parents[2]
 ARTIFACT = ROOT / ".openresearch" / "artifacts" / "claim_6"
@@ -32,6 +33,7 @@ def verify():
         return {
             "checkpoint_evaluation": checkpoint_evaluation(local_files),
             "generator_sensitivity": generator_sensitivity(),
+            "falsification_attempt": falsification(local_files),
         }
 
     released = release_audit(extra_check=additional_evidence)
@@ -39,8 +41,8 @@ def verify():
         "claim": 6,
         "status": "BLOCKED",
         "exact_contract": contract["statement"],
-        "routes_completed": 3,
+        "routes_completed": 4,
         "release_audit": released,
-        "blocker": contract["blocker_after_route_3"],
+        "blocker": contract["blocker_after_route_4"],
         "limitations": contract["limitations"],
     }

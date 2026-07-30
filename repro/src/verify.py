@@ -259,7 +259,7 @@ def main():
               "claims": claims, "limitations": "Finite executable traces validate the source constructions and negative controls. Universal complexity-class claims are established by the cited public TeX proofs, not by these finite checks.",
               "compute": {
                   "requested": "Hugging Face cpu-upgrade",
-                  "estimated_cores": 1,
+                  "estimated_cores": 64,
                   "logical_cpus": os.cpu_count(),
                   "affinity_cpus": len(os.sched_getaffinity(0)) if hasattr(os, "sched_getaffinity") else None,
                   "platform": platform.platform(),

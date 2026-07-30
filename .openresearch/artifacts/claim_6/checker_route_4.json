@@ -1,0 +1,11 @@
+{
+  "checker": "repro/src/claim6_falsification.py",
+  "fail_closed_conditions": [
+    "immutable release tree and two-commit history match",
+    "paper and released protocol fragments match their audited sources",
+    "all five counterexample identities are required",
+    "no assumption-breaking candidate is accepted",
+    "a fully identified meta-control is accepted"
+  ],
+  "expected_verdict": "BLOCKED"
+}

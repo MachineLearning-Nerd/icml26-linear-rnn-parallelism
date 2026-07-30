@@ -1,0 +1,5 @@
+{
+  "name": "positive label with source and target forced into different buckets",
+  "expected": "independent reachability checker rejects the label",
+  "observed": "rejected"
+}

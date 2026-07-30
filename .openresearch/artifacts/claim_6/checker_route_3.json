@@ -1,0 +1,9 @@
+{
+  "checker": "repro/src/claim6_generator_sensitivity.py",
+  "examples": 270000,
+  "all_labels_match_independent_reachability": true,
+  "endpoint_accuracy_range": [0.5, 0.5483],
+  "maximum_accepted_endpoint_accuracy": 0.55,
+  "released_bug_control_accuracy": 1.0,
+  "status": "passed"
+}

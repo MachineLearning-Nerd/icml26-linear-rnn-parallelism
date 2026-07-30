@@ -26,3 +26,12 @@ regenerates the paper's 10,000-example test-bin scale for `p` in
 `{0.1, 0.5, 0.9}` and three fixed seeds, verifies every label by graph
 reachability, and measures the endpoint-only shortcut. Restoring the released
 zero initialization is the matched control.
+
+Route 4 is a dedicated falsification qualification audit. It retrieves the full
+Git tree and history at the pinned author commit, verifies that the release has
+only one DGC checkpoint and no dependency lock or DGC Mamba launcher, and
+cross-checks the exact launcher arguments against the main-text and appendix
+protocols. A candidate counterexample is accepted only if dataset, model,
+Figure checkpoint, training protocol, and stochastic-run identity all hold.
+The released checkpoint divergence, generator repair, and endpoint rule are
+deliberate negative controls because each violates at least one identity.

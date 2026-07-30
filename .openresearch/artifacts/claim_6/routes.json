@@ -12,12 +12,12 @@
     },
     {
       "id": "generator_repair_sensitivity",
-      "status": "completed_by_this_node",
+      "status": "completed",
       "question": "Does the result survive the paper/code conflicts in depth, batch size, learning rate, pooling, and dataset generation?"
     },
     {
       "id": "falsification_attempt",
-      "status": "pending",
+      "status": "completed_by_this_node",
       "question": "Can an assumption-satisfying run contradict the exact displayed empirical separation?"
     }
   ]

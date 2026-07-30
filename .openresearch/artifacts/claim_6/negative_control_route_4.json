@@ -1,0 +1,6 @@
+{
+  "candidate": "released checkpoint divergence",
+  "assumption_violation": "no Figure 2 checkpoint, protocol, or stochastic-run identity",
+  "expected": "rejected as a valid falsification",
+  "checker_control": "a hypothetical candidate with all five identities is accepted"
+}

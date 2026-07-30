@@ -1,0 +1,10 @@
+{
+  "author_commit": "e6d2832c0be35b93630a094124ae8dbabcbfb18d",
+  "tree_entries": 170,
+  "blobs": 152,
+  "commit_count": 2,
+  "dgc_checkpoint_count": 1,
+  "required_counterexample_identities": 5,
+  "available_candidates_accepted_as_falsification": 0,
+  "expected_status": "did_not_falsify"
+}

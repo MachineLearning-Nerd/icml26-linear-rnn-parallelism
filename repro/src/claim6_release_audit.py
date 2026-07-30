@@ -20,6 +20,8 @@ FILES = {
     "dgc/generate_data.py": "302c2ccd5b65846f1e158b124a992d80fad4ef3c",
     "dgc/rnn.sh": "8d2c2b2e7b611ca2a936b023eb4d3ed19969f74c",
     "dgc/transformer.sh": "e99b98a51645e7ea430d86a2e78f5ef4e51e4cd8",
+    "dgc/delta.sh": "f237e0beb58eaadd6faea05526d8019d29b8cebe",
+    "dgc/rwkv.sh": "07af2ea562c1819d03e3df25ffe7551afee475cc",
     "dgc/train_rnn.py": "e5936b00ba42c934fffee635bc67fe4a3c0d3d31",
     "dgc/train_transformer.py": "455a1c365a902806091da18bad2296dc5aa4819f",
     "dgc/train_mamba.py": "2408abcb0ca3f0806ed458324ea42e768a69de63",

@@ -1,6 +1,6 @@
 # Current verification - Claim 6
 
-**Current verdict: BLOCKED after routes 1-3 of 4.**
+**Current verdict: BLOCKED after all four required routes.**
 
 ## Exact claim and paper values
 
@@ -71,13 +71,46 @@ regenerated for `p` in `{0.1, 0.5, 0.9}` and seeds `0`, `1`, and `260303612`.
 Every label must still equal graph reachability. The endpoint shortcut is
 measured against a matched control that restores the released bug.
 
-Exact route-3 statistics are pending this node's terminal run.
+The terminal run checked 270,000 examples. Every label matched independent
+reachability. The endpoint-only accuracy ranged from 50.00% to 54.83%; both
+OOD bins were exactly 50.00% in every configuration. Restoring the released bug
+returned 100% endpoint accuracy (95% Wilson lower bound 99.9616%). The run used
+Hugging Face `cpu-upgrade`, exposed 64 logical CPUs, took 222.060673 seconds in
+the verifier, and completed in 249 seconds.
+
+## Route 4 - exact-assumption falsification qualification
+
+The exact Figure 2 statement is a five-model, three-bin result under one finite
+training protocol. A counterexample qualifies only when released-dataset,
+model-row, Figure-checkpoint, training-protocol, and stochastic-run identity
+all hold.
+
+The verifier inventories all 170 paths and both commits at the pinned author
+revision. It confirms one DGC checkpoint, no dependency lock, and no DGC Mamba
+launcher. It also checks these incompatible protocols:
+
+| Source | Batch | LR | Layers/steps |
+| --- | ---: | ---: | --- |
+| Main text | 64 | 1e-4 | 60,000 steps |
+| Appendix | 128 | 3e-4 | 2 layers, 60,000 steps |
+| Released RNN | 256 | 3e-4 | 1 layer, 30,000 steps |
+| Released Transformer | 64 | 3e-4 | 1 layer, 30,000 steps |
+| Released DeltaNet | 128 | default 3e-4 | 1 layer, 30,000 steps |
+| Released RWKV-7 | 64 | 3e-5 | 2 layers, 30,000 steps |
+| Released Mamba | no launcher | script default 3e-4 | 4 layers, 30,000 steps |
+
+The released-checkpoint divergence, repaired-generator result, and endpoint
+rule are each rejected as valid falsifications because they violate at least
+one required identity. A fully identified meta-control is accepted. No valid
+counterexample is available, so the mandatory fourth route does not falsify
+the claim.
 
 ## Why this does not resolve Claim 6
 
 The audits are direct evidence about the public release and its sole checkpoint.
-They are not a faithful five-model neural training run. Claim 6 therefore
-remains `BLOCKED`.
+They are not a faithful five-model neural training run. The exact Figure
+checkpoints, seeds, logs, locked environment, and one consistent protocol are
+missing. Claim 6 therefore remains `BLOCKED`, not `VERIFIED` or `FALSIFIED`.
 
 ## Reproduction
 
@@ -89,6 +122,9 @@ Current verifier:
 
 - `repro/src/claim6_proof.py`
 - `repro/src/claim6_release_audit.py`
+- `repro/src/claim6_checkpoint_eval.py`
+- `repro/src/claim6_generator_sensitivity.py`
+- `repro/src/claim6_falsification.py`
 - `.openresearch/artifacts/claim_6/claim_contract.json`
 
 ## Visibility matrix
@@ -100,4 +136,4 @@ Current verifier:
 | 3 | Current Claim 3 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
 | 4 | Current Claim 4 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
 | 5 | Current Claim 5 | Yes | Yes | Yes | Yes | Yes | Yes | BLOCKED |
-| 6 | This page | Yes | Pending terminal run | Author commit | Yes | Yes | Yes | BLOCKED |
+| 6 | This page | Yes | Yes | Yes | Yes | Yes | Yes | BLOCKED |

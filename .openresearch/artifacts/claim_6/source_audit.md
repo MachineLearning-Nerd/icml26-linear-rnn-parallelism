@@ -10,15 +10,17 @@ The paper links the author repository at
 
 The source and release conflict:
 
-- the main text says batch 64, learning rate `1e-4`, two layers, and eight
-  Transformer heads;
+- the main text says batch 64, learning rate `1e-4`, and 60,000 steps;
 - the appendix says batch 128, learning rate `3e-4`, two layers, and four
   Transformer heads;
 - released launchers use other per-model settings, generally one layer and
   30,000 rather than 60,000 steps;
-- no Figure 2 seeds, uncertainty intervals, logs, environment, or five matching
-  checkpoints are released.
+- no Figure 2 seeds, uncertainty intervals, logs, dependency lock, DGC Mamba
+  launcher, or five matching checkpoints are released.
 
 The released generator initializes every bucket entry to zero and only samples
 when an entry is neither zero nor one. Consequently, the documented Bernoulli
 `p` is unreachable.
+
+The fourth-route inventory checks all 170 entries and both commits at the
+pinned author revision. There is exactly one DGC checkpoint.
