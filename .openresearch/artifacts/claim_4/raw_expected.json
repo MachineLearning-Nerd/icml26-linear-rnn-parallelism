@@ -1,0 +1,10 @@
+{
+  "claim": 4,
+  "status": "VERIFIED",
+  "encoding": "gapped base-4",
+  "complete_stack_domain_depth": 14,
+  "complete_stack_count": 32767,
+  "conditional_assumption": "NC != P",
+  "negative_control": "paper base-2 fixed-margin construction is rejected",
+  "fixed_command": "uv run python repro/src/verify.py"
+}

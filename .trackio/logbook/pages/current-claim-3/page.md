@@ -95,8 +95,31 @@ or control pass exits nonzero.
 
 ## Raw result
 
-Pending this cumulative branch’s terminal run. Exact output, Git SHA,
-allocation, and runtime will be embedded by the next node.
+Run `f5341b8c-3fbd-4b7e-8e05-30c5fe3740a9` reached `done` at Git SHA
+`4ed6f82adc63dc7df9f6278a055e5074067b3edd`.
+
+```json
+{
+  "status": "VERIFIED",
+  "conditional_assumption_retained": true,
+  "derivation_steps": 6,
+  "integer_zero_mask_cases": 8193,
+  "complete_finite_domain_instances": 205012,
+  "negative_control": "rejected",
+  "estimated_cores": 1,
+  "selected_flavor": "cpu-upgrade",
+  "logical_cpus": 64,
+  "affinity_cpus": 64,
+  "verifier_runtime_seconds": 1.6764075320679694,
+  "job_runtime_seconds": 21
+}
+```
+
+Downloadable records:
+
+- `.openresearch/artifacts/claim_3/raw_run.json`
+- `.openresearch/artifacts/claim_3/checker_output.json`
+- `.openresearch/artifacts/claim_3/negative_control_output.json`
 
 ## Limitations
 
@@ -111,7 +134,7 @@ claim.
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Current Claim 1 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
 | 2 | Current Claim 2 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
-| 3 | This page | Yes | Pending terminal run | Pending terminal run | Yes | Yes | Yes | Pending |
+| 3 | This page | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
 | 4 | Historical only | No | No | No | No | Toy only | No | BLOCKED |
 | 5 | Historical only | No | No | No | No | Toy only | No | BLOCKED |
 | 6 | None | No | No | No | No | No | No | BLOCKED |

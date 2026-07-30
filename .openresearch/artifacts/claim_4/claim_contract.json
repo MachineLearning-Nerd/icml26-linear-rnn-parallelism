@@ -1,0 +1,42 @@
+{
+  "claim_id": 4,
+  "statement": "There exists a fixed one-layer polynomial-precision nonlinear MLP RNN whose language is P-complete under FO reductions. Consequently, if NC is not equal to P, there is a nonlinear RNN that cannot, for any fixed k, be simulated by polynomial-size bounded-fan-in circuit families of depth O(log^k n).",
+  "quantifiers": {
+    "existential": [
+      "one fixed P-complete language with polynomial padding",
+      "one fixed one-layer nonlinear MLP RNN recognizing it"
+    ],
+    "universal": [
+      "every valid padded input",
+      "every fixed exponent k in the conditional circuit statement"
+    ],
+    "obligation": "The RNN exactly simulates the fixed polynomial-time multi-stack machine with polynomial-bit precision."
+  },
+  "conditional_assumption": "NC != P",
+  "assumptions": [
+    "The input language includes enough explicit padding symbols for one recurrent step per simulated machine step.",
+    "Stack values are exact rationals with polynomially many bits.",
+    "The recurrent gate is a fixed finite ReLU MLP with rational weights.",
+    "A standard P-complete language and its polynomial-time multi-stack recognizer are used.",
+    "FO reductions are closed under composition with the fixed recognizer."
+  ],
+  "source": {
+    "archive_url": "https://export.arxiv.org/e-print/2603.03612",
+    "retrieved_at": "2026-07-30",
+    "sha256": "f1078eb9464172f9a941c1dd95354116ae749d64b91ec29947b47a588d2a1f9f",
+    "anchors": [
+      "3-nonlinear.tex:61-96 (Theorem 1 and P-completeness corollaries)",
+      "appendix-rnn.tex:14-64 (stack simulation and padding proof)"
+    ],
+    "primary_reference": {
+      "title": "On the Computational Power of Neural Nets",
+      "authors": "H. T. Siegelmann and E. D. Sontag",
+      "year": 1995,
+      "doi": "10.1006/jcss.1995.1013"
+    }
+  },
+  "pass_condition": "A gapped exact-rational stack encoding has symbolic push, pop, head, and empty proofs; fixed ReLU selectors implement the finite transition table; bit length is polynomial in padded input length; the padding map preserves P-completeness under FO reductions; the NC-versus-P conclusion remains conditional; the independent complete bounded-domain checker passes; and the paper's vanishing-margin base-2 construction is rejected.",
+  "fail_condition": "Any source mismatch, derivation mismatch, lost encoding gap, stack-operation mismatch, super-polynomial precision, dropped padding or conditional assumption, or negative-control pass exits nonzero.",
+  "verdict_if_passed": "VERIFIED",
+  "limitations": "This independently repairs the paper's base-2 stack proof using a gapped base-4 encoding. It verifies the exact existential P-completeness claim, not the stronger unpadded claim that an RNN can provide arbitrarily many internal steps per input symbol. The circuit lower bound remains conditional on NC != P."
+}

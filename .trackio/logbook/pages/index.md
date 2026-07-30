@@ -4,6 +4,7 @@
 
 | Page |
 | --- |
+| [Current verification - Claim 4](#/current-claim-4) |
 | [Current verification - Claim 3](#/current-claim-3) |
 | [Current verification - Claim 2](#/current-claim-2) |
 | [Current verification - Claim 1](#/current-claim-1) |

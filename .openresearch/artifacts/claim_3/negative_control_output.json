@@ -1,0 +1,6 @@
+{
+  "name": "one-layer rather than n-layer reduction",
+  "path": "0 -> 1 -> 2",
+  "expected": "does not reach the reduced target",
+  "observed": "rejected"
+}

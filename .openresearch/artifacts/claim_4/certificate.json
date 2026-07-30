@@ -1,0 +1,49 @@
+{
+  "certificate_version": 1,
+  "derivation": [
+    {
+      "id": "gapped_stack_encoding",
+      "definition": "E(empty)=0; E(bw)=(2b+1+E(w))/4",
+      "conclusion": "top-0 and top-1 reachable values are separated by a fixed gap of 1/4"
+    },
+    {
+      "id": "relu_observers",
+      "definition": "head(s)=4 ReLU(s-1/2)-4 ReLU(s-3/4); nonempty(s)=4s-ReLU(4s-1)",
+      "conclusion": "head and empty tests are exact on the reachable encoding set"
+    },
+    {
+      "id": "affine_stack_updates",
+      "definition": "push_b(s)=(2b+1+s)/4; pop(s)=4s-(2 head(s)+1)",
+      "conclusion": "push and nonempty pop are mutual inverses"
+    },
+    {
+      "id": "finite_control_selector",
+      "definition": "For x in [0,1] and u in {0,1}, select(u,x)=ReLU(x+u-1); sum one-hot-selected candidate updates.",
+      "conclusion": "A fixed ReLU MLP realizes every finite state/stack transition."
+    },
+    {
+      "id": "polynomial_precision",
+      "premise": "After T stack operations, denominator and numerator are bounded by 4^T.",
+      "conclusion": "Each exact stack scalar uses O(T) bits; T polynomial in padded input length gives polynomial precision."
+    },
+    {
+      "id": "p_complete_padding",
+      "construction": "For fixed P-complete L decidable in C n^c steps, use L_pad={w #^(C|w|^c): w in L}.",
+      "conclusion": "The padding is an FO transduction, L_pad is in P and P-hard, and one recurrent step per symbol suffices."
+    },
+    {
+      "id": "conditional_nc_contrapositive",
+      "premise": "A polylog-depth circuit for the fixed P-complete RNN language would put every P language in NC by FO composition.",
+      "conclusion": "If NC != P, this RNN has no O(log^k n)-depth polynomial-size simulation for any fixed k."
+    }
+  ],
+  "reachable_intervals": {
+    "empty": ["0", "0"],
+    "top_0": ["1/4", "1/2"],
+    "top_1": ["3/4", "1"]
+  },
+  "conditional_conclusion": {
+    "antecedent": "NC != P",
+    "consequent": "The fixed P-complete RNN language is not in NC."
+  }
+}

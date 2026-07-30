@@ -18,6 +18,7 @@ from pathlib import Path
 from claim1_proof import verify as verify_claim1
 from claim2_proof import verify as verify_claim2
 from claim3_proof import verify as verify_claim3
+from claim4_proof import verify as verify_claim4
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "outputs"
@@ -237,6 +238,7 @@ def main():
         "claim_1": verify_claim1(),
         "claim_2": verify_claim2(),
         "claim_3": verify_claim3(),
+        "claim_4": verify_claim4(),
     }
     claims = {"claim_1_lrnn_pnc1": c1_lrnn_convolutional_pnc1(), "claim_2_near_log_depth": c2_near_log_depth(),
               "claim_3_log_precision_connectivity": c3_sorted_connectivity(), "claim_4_poly_precision_barrier": c4_poly_precision_stacks(),
