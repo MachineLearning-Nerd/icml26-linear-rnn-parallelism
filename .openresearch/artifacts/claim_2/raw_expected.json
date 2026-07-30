@@ -1,0 +1,7 @@
+{
+  "claim": 2,
+  "status": "VERIFIED",
+  "independent_exact_rational_cases": 3025,
+  "negative_control": "Appendix A printed denominator bc is rejected",
+  "fixed_command": "uv run python repro/src/verify.py"
+}

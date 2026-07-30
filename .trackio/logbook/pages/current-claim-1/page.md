@@ -93,9 +93,35 @@ negative control that unexpectedly passes.
 
 ## Raw result
 
-The remote run result, exact Git SHA, actual CPU allocation, and runtime will be
-added by the next cumulative experiment node after this branch reaches a
-terminal state. Until then this candidate page is not release-ready.
+Run `0010393c-cfa3-406f-b00a-62f3530b7bd8` reached `done` at Git SHA
+`3a1fd68ababec3354765ad243b041e95b5873b8d`.
+
+```json
+{
+  "status": "VERIFIED",
+  "formal_associativity": true,
+  "resource_boundary_cases": 59,
+  "largest_checked_boundary": 1048577,
+  "independent_checker": {
+    "passed": true,
+    "seed": 260303612,
+    "numeric_cases": 256
+  },
+  "negative_control": "rejected as non-associative",
+  "estimated_cores": 1,
+  "selected_flavor": "cpu-upgrade",
+  "logical_cpus": 64,
+  "affinity_cpus": 64,
+  "verifier_runtime_seconds": 0.2163839580007334,
+  "job_runtime_seconds": 26
+}
+```
+
+Downloadable records:
+
+- `.openresearch/artifacts/claim_1/raw_run.json`
+- `.openresearch/artifacts/claim_1/checker_output.json`
+- `.openresearch/artifacts/claim_1/negative_control_output.json`
 
 ## Limitations
 
@@ -108,7 +134,7 @@ trusted library lemmas rather than re-proving those foundations.
 
 | Claim | Canonical page | Code visible | Data inline | Raw link | Checker | Control | Exact claim tested | Reviewer verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | This page | Yes | Pending terminal run | Pending terminal run | Yes | Yes | Yes | Pending |
+| 1 | This page | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
 | 2 | Historical only | No | No | No | No | Toy only | No | BLOCKED |
 | 3 | Historical only | No | No | No | No | Toy only | No | BLOCKED |
 | 4 | Historical only | No | No | No | No | Toy only | No | BLOCKED |

@@ -1,0 +1,40 @@
+{
+  "claim_id": 2,
+  "statement": "For every language recognized by an LRNN over exact rational arithmetic under the assumptions of Claim 1, there is a polynomial-size bounded-fan-in Boolean NC circuit family of depth O(log n log* n). Relative to a TC0/transformer simulation in O(log n) bounded-fan-in depth, the asymptotic multiplicative overhead is O(log* n).",
+  "quantifiers": {
+    "universal": [
+      "LRNN-recognized language satisfying Claim 1 assumptions",
+      "input length n >= 2"
+    ],
+    "existential": [
+      "a polynomial-size bounded-fan-in Boolean circuit family"
+    ],
+    "obligation": "The Boolean family recognizes exactly the same language with depth O(log n log* n)."
+  },
+  "assumptions": [
+    "The Claim 1 FO-uniform PNC1 arithmetic circuit construction is available.",
+    "Rational gates are represented by integer numerator-denominator pairs with nonzero denominators.",
+    "Jung's depth-efficient arithmetic-to-Boolean simulation applies to the resulting polynomial-size integer circuit family.",
+    "The transformer comparator is only the standard TC0 subset NC1 upper bound; this is not an architecture-specific wall-clock claim."
+  ],
+  "source": {
+    "archive_url": "https://export.arxiv.org/e-print/2603.03612",
+    "retrieved_at": "2026-07-30",
+    "sha256": "f1078eb9464172f9a941c1dd95354116ae749d64b91ec29947b47a588d2a1f9f",
+    "anchors": [
+      "2-prelim.tex:282-323 (classes and Jung simulation statement)",
+      "4-linear.tex:93-102 (Corollary 5)",
+      "appendix-arithQ.tex:12-35 (Q gate lift and Boolean simulation)"
+    ],
+    "primary_reference": {
+      "title": "Depth efficient transformations of arithmetic into boolean circuits",
+      "author": "Hermann Jung",
+      "year": 1985,
+      "doi": "10.1007/BFb0028801"
+    }
+  },
+  "pass_condition": "The derivation certificate composes the Claim 1 arithmetic depth, a correct constant-depth Q-to-Z gate lift, and Jung's O(d(n) log* n) simulation; symbolic expansion is dominated by O(log n log* n); exact rational operations agree with an independent checker; and the printed bc-denominator control is rejected.",
+  "fail_condition": "Any source or DOI mismatch, missing derivation step, symbolic depth mismatch, rational-operation mismatch, or negative-control pass exits nonzero.",
+  "verdict_if_passed": "VERIFIED",
+  "limitations": "The checker independently reconstructs the corollary and validates the rational gate lift and asymptotic substitution. Jung's 1985 arithmetic-to-Boolean simulation is an explicit trusted primary theorem; its Chinese-remainder construction is not re-formalized here. Big-O does not assert the historical verifier's sampled exact depth formula or a hardware latency constant."
+}

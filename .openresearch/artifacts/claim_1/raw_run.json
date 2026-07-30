@@ -1,0 +1,18 @@
+{
+  "run_id": "0010393c-cfa3-406f-b00a-62f3530b7bd8",
+  "git_sha": "3a1fd68ababec3354765ad243b041e95b5873b8d",
+  "fixed_command": "uv run python repro/src/verify.py",
+  "status": "done",
+  "job_runtime_seconds": 26,
+  "verifier_runtime_seconds": 0.2163839580007334,
+  "estimated_cores": 1,
+  "selected_flavor": "cpu-upgrade",
+  "logical_cpus": 64,
+  "affinity_cpus": 64,
+  "formal_associativity": true,
+  "resource_boundary_cases": 59,
+  "largest_checked_boundary": 1048577,
+  "independent_numeric_cases": 256,
+  "seed": 260303612,
+  "negative_control_observed": "rejected as non-associative"
+}

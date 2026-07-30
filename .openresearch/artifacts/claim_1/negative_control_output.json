@@ -1,0 +1,5 @@
+{
+  "name": "reversed-bias affine composition",
+  "expected": "rejected as non-associative",
+  "observed": "rejected as non-associative"
+}

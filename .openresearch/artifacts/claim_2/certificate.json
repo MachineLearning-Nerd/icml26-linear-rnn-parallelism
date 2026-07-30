@@ -1,0 +1,52 @@
+{
+  "certificate_version": 1,
+  "derivation": [
+    {
+      "id": "claim_1_arithmetic_depth",
+      "premises": ["Claim 1 certificate"],
+      "conclusion": "d_A(n) <= a ceil(log2 n) + b for fixed constants a,b"
+    },
+    {
+      "id": "rational_to_integer_gate_lift",
+      "premises": ["a/b+c/d=(ad+bc)/(bd)", "(a/b)(c/d)=ac/(bd)"],
+      "conclusion": "d_Z(n) <= r d_A(n) + s for fixed constants r,s"
+    },
+    {
+      "id": "jung_boolean_simulation",
+      "premises": ["polynomial-size integer arithmetic circuit of depth d_Z(n)"],
+      "conclusion": "d_B(n) <= j d_Z(n) log* n + k for fixed constants j,k",
+      "primary_source": {
+        "title": "Depth efficient transformations of arithmetic into boolean circuits",
+        "author": "Hermann Jung",
+        "year": 1985,
+        "doi": "10.1007/BFb0028801"
+      }
+    },
+    {
+      "id": "asymptotic_substitution",
+      "premises": ["the preceding three bounds"],
+      "conclusion": "d_B(n)=O(log n log* n)"
+    },
+    {
+      "id": "transformer_comparator",
+      "premises": ["TC0 subset NC1"],
+      "conclusion": "the upper-bound ratio is O(log* n), not an exact measured latency ratio"
+    }
+  ],
+  "checked_symbolic_instance": {
+    "symbols": {
+      "a": 3,
+      "b": 5,
+      "r": 2,
+      "s": 1,
+      "j": 7,
+      "k": 11
+    },
+    "expanded_coefficients": {
+      "log_n_logstar_n": 42,
+      "logstar_n": 77,
+      "constant": 11
+    },
+    "domination_constant": 130
+  }
+}
