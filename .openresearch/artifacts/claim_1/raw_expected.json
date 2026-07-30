@@ -1,0 +1,9 @@
+{
+  "claim": 1,
+  "expected_status": "VERIFIED",
+  "formal_associativity": true,
+  "resource_rule": "D(n)=1+D(ceil(n/2))=ceil(log2 n)",
+  "independent_numeric_cases": 256,
+  "negative_control_expected": "rejected as non-associative",
+  "verifier_exit_code_expected": 0
+}

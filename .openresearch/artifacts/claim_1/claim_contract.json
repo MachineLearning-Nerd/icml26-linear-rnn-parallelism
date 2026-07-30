@@ -1,0 +1,30 @@
+{
+  "claim_id": 1,
+  "statement": "For every fixed finite-depth LRNN M over exact rational arithmetic whose fixed-width parameter maps have arithmetic closed forms independent of sequence position, the language accepted by the sign of M's final rational readout has an FO-uniform polynomial-size bounded-fan-in arithmetic circuit family of O(log n) depth; equivalently, it is in PNC^1.",
+  "quantifiers": {
+    "universal": ["fixed LRNN M satisfying the stated assumptions", "input length n >= 1", "input string w in Sigma^n"],
+    "existential": ["an FO-uniform PNC^1 circuit family C_M,n"],
+    "obligation": "C_M,n(w) accepts exactly when M accepts w"
+  },
+  "assumptions": [
+    "The alphabet, number of layers, head count, and all hidden dimensions are constants fixed by M.",
+    "Arithmetic is exact over Q and rational values have polynomial-size representations.",
+    "A_t(x_t), b_t(x_t), queries, feed-forward maps, normalization, and readout are arithmetic closed forms independent of t.",
+    "The paper's cited closed-form-to-FO-uniform-TC^0 lemma and standard finite-composition closure are used as trusted library lemmas."
+  ],
+  "source": {
+    "archive_url": "https://export.arxiv.org/e-print/2603.03612",
+    "retrieved_at": "2026-07-30",
+    "sha256": "f1078eb9464172f9a941c1dd95354116ae749d64b91ec29947b47a588d2a1f9f",
+    "anchors": [
+      "2-prelim.tex:45-54 (arithmetic closed forms)",
+      "2-prelim.tex:124-131 (LRNN definition)",
+      "2-prelim.tex:206-237 (fixed multilayer architecture and recognition)",
+      "4-linear.tex:19-64 (Theorem 3 and proof)"
+    ]
+  },
+  "pass_condition": "All certificate lemmas are present; the formal affine composition normalizes identically under both parenthesizations; the balanced circuit recurrence has depth ceil(log2 n) and n-1 product nodes at power-of-two boundaries and adjacent cases; the independent numeric implementation agrees; and the deliberately reversed-bias composition is rejected as non-associative.",
+  "fail_condition": "Any missing assumption, source-hash mismatch, algebraic mismatch, resource-bound mismatch, independent-checker mismatch, or negative-control pass exits nonzero.",
+  "verdict_if_passed": "VERIFIED",
+  "limitations": "The checker reconstructs the LRNN-to-affine-circuit compiler and its universal algebraic/resource invariants. It treats the cited closed-form-to-FO-uniform-TC^0 result and standard circuit-class closure facts as trusted library lemmas rather than re-proving those foundations."
+}

@@ -1,0 +1,24 @@
+{
+  "certificate_version": 1,
+  "lemmas": {
+    "closed_form_parameterization": "Every fixed parameter map is FO-uniform TC^0 by the audited closed-form lemma, hence available below the PNC^1 arithmetic layer.",
+    "affine_lift": "Represent h -> hA+b by the pair (A,b), equivalently by one homogeneous block matrix.",
+    "associative_composition": "(A,b) o (C,d) = (AC,bC+d); both parenthesizations of three transforms normalize to (ACE,bCE+dE+f).",
+    "balanced_product": "Compose n affine transforms with a balanced binary tree.",
+    "fixed_layer_closure": "A fixed number of heads and layers adds only a constant multiplicative depth factor and polynomial size.",
+    "positive_gap_gate": "The final strict positivity test is exactly the PNC^1 language predicate."
+  },
+  "resource_recurrence": {
+    "next_width": "ceil(m/2)",
+    "depth": "D(1)=0; D(n)=1+D(ceil(n/2))=ceil(log2 n)",
+    "product_nodes": "S(1)=0; every binary tree with n leaves has S(n)=n-1",
+    "per_product_depth": "O(1), because M has fixed dimension",
+    "total_depth": "O(log n)",
+    "total_size": "O(n) per prefix/output and polynomial for all n outputs"
+  },
+  "trusted_library_lemmas": [
+    "Arithmetic closed form over Q is FO-uniform TC^0 (paper Lemma 1, citing Chiang et al.).",
+    "FO-uniform polynomial-size circuit families are closed under finite composition.",
+    "PNC^1 accepts by positivity of a GapNC^1 integer output."
+  ]
+}

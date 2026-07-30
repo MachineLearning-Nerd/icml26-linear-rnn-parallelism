@@ -15,6 +15,8 @@ import random
 import time
 from pathlib import Path
 
+from claim1_proof import verify as verify_claim1
+
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "outputs"
 
@@ -229,14 +231,17 @@ def c5_four_layer_dplr_wfa() -> dict:
 def main():
     started = time.perf_counter()
     OUT.mkdir(parents=True, exist_ok=True)
+    proof_claims = {"claim_1": verify_claim1()}
     claims = {"claim_1_lrnn_pnc1": c1_lrnn_convolutional_pnc1(), "claim_2_near_log_depth": c2_near_log_depth(),
               "claim_3_log_precision_connectivity": c3_sorted_connectivity(), "claim_4_poly_precision_barrier": c4_poly_precision_stacks(),
               "claim_5_four_layer_dplr": c5_four_layer_dplr_wfa()}
-    result = {"paper": "29sn1uqWn3", "arxiv": "2603.03612", "all_claims_passed": all(x["passed"] for x in claims.values()),
+    result = {"paper": "29sn1uqWn3", "arxiv": "2603.03612",
+              "all_claims_passed": all(x["passed"] for x in claims.values()) and all(x["status"] == "VERIFIED" for x in proof_claims.values()),
+              "proof_claims": proof_claims,
               "claims": claims, "limitations": "Finite executable traces validate the source constructions and negative controls. Universal complexity-class claims are established by the cited public TeX proofs, not by these finite checks.",
               "compute": {
                   "requested": "Hugging Face cpu-upgrade",
-                  "estimated_cores": 8,
+                  "estimated_cores": 1,
                   "logical_cpus": os.cpu_count(),
                   "affinity_cpus": len(os.sched_getaffinity(0)) if hasattr(os, "sched_getaffinity") else None,
                   "platform": platform.platform(),
@@ -244,6 +249,6 @@ def main():
               }}
     (OUT / "verdict.json").write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
     print(json.dumps({"all_claims_passed": result["all_claims_passed"], "claim_count": len(claims),
-                      "compute": result["compute"]}, indent=2))
+                      "proof_claims": proof_claims, "compute": result["compute"]}, indent=2))
 
 if __name__ == "__main__": main()

@@ -1,0 +1,16 @@
+{
+  "retrieved_at": "2026-07-30",
+  "user_agent": "OpenResearch-Reproduction/1.0 (paper audit; contact via github.com/MachineLearning-Nerd)",
+  "sources": [
+    {
+      "url": "https://export.arxiv.org/e-print/2603.03612",
+      "sha256": "f1078eb9464172f9a941c1dd95354116ae749d64b91ec29947b47a588d2a1f9f",
+      "bytes": 150283
+    },
+    {
+      "url": "https://ar5iv.labs.arxiv.org/html/2603.03612",
+      "sha256": "dd30cb4cf8394b71d3df2ad4e0984d670649b7ced81caa6b2ea81f7a8c542753",
+      "bytes": 957907
+    }
+  ]
+}
