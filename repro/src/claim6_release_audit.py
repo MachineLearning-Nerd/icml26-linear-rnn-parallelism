@@ -17,7 +17,7 @@ RAW_BASE = (
 USER_AGENT = "OpenResearch-Reproduction/1.0 (arXiv 2603.03612)"
 
 FILES = {
-    "dgc/generate_data.py": "302c2ccd5b65846f1e158b124a992d80fad4ef1c",
+    "dgc/generate_data.py": "302c2ccd5b65846f1e158b124a992d80fad4ef3c",
     "dgc/rnn.sh": "8d2c2b2e7b611ca2a936b023eb4d3ed19969f74c",
     "dgc/train_rnn.py": "e5936b00ba42c934fffee635bc67fe4a3c0d3d31",
     "dgc/train_transformer.py": "455a1c365a902806091da18bad2296dc5aa4819f",
