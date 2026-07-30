@@ -76,9 +76,35 @@ symbolic-depth mismatch, exact-rational mismatch, or a control that passes.
 
 ## Raw result
 
-Pending the terminal run of this cumulative branch. Until its raw output,
-exact Git SHA, allocation, and runtime are embedded by the next node, this page
-is not release-ready.
+Run `5b01911b-996a-48c2-bca1-015477c22888` reached `done` at Git SHA
+`004afa281fd4118674b89314d8b11218d0255e62`.
+
+```json
+{
+  "status": "VERIFIED",
+  "derivation_steps": 5,
+  "independent_exact_rational_cases": 3025,
+  "resource_boundary_cases": 11,
+  "largest_boundary_bit_length": 65537,
+  "negative_control": {
+    "printed_result": "5/2",
+    "correct_result": "5/6",
+    "observed": "rejected"
+  },
+  "estimated_cores": 1,
+  "selected_flavor": "cpu-upgrade",
+  "logical_cpus": 64,
+  "affinity_cpus": 64,
+  "verifier_runtime_seconds": 0.24239702100021532,
+  "job_runtime_seconds": 21
+}
+```
+
+Downloadable records:
+
+- `.openresearch/artifacts/claim_2/raw_run.json`
+- `.openresearch/artifacts/claim_2/checker_output.json`
+- `.openresearch/artifacts/claim_2/negative_control_output.json`
 
 ## Limitations
 
@@ -91,7 +117,7 @@ constants and does not imply the historical exact sampled formula.
 | Claim | Canonical page | Code visible | Data inline | Raw link | Checker | Control | Exact claim tested | Reviewer verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Current Claim 1 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
-| 2 | This page | Yes | Pending terminal run | Pending terminal run | Yes | Yes | Yes | Pending |
+| 2 | This page | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
 | 3 | Historical only | No | No | No | No | Toy only | No | BLOCKED |
 | 4 | Historical only | No | No | No | No | Toy only | No | BLOCKED |
 | 5 | Historical only | No | No | No | No | Toy only | No | BLOCKED |

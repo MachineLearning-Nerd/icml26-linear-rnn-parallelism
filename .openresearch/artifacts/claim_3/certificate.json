@@ -1,0 +1,44 @@
+{
+  "certificate_version": 1,
+  "derivation": [
+    {
+      "id": "deterministic_reachability_source",
+      "conclusion": "Functional directed reachability is L-complete under FO reductions.",
+      "primary_source_doi": "10.1016/0196-6774(87)90018-6"
+    },
+    {
+      "id": "fo_layered_reduction",
+      "construction": "Replace a target's outgoing edge by none; use tuple vertices (h,v), 0<=h<=|V|; map (h,v) to (h+1,f(v)); map every (h,t) to F.",
+      "invariants": [
+        "O(|V|^2) output size",
+        "at most one edge per source",
+        "all edges go to a later lexicographic layer",
+        "F is reachable iff t is reachable within at most |V| functional steps",
+        "the tuple interpretation is first-order definable"
+      ]
+    },
+    {
+      "id": "sorted_counter_invariant",
+      "conclusion": "After each ordered edge, S equals the endpoint reached after scanning that prefix; the final zero comparison accepts exactly reachability."
+    },
+    {
+      "id": "counter_to_relu_rnn",
+      "construction": "zero(z)=ReLU(1-(ReLU(z)+ReLU(-z))) on integer z; finite transition/update tables are fixed piecewise-linear selectors.",
+      "conclusion": "One fixed one-layer MLP recurrence simulates every transition exactly."
+    },
+    {
+      "id": "log_precision",
+      "premise": "Every counter magnitude is bounded by the unary input length N.",
+      "conclusion": "Signed counters require at most ceil(log2(2N+1))=O(log N) bits."
+    },
+    {
+      "id": "conditional_depth_contrapositive",
+      "premise": "If every log-precision nonlinear RNN had o(log^2 n)-depth circuits, the fixed RNN for an FO-complete L language would, under FO composition, give that depth to every L language.",
+      "conclusion": "Under the stated assumption, some log-precision nonlinear RNN requires Omega(log^2 n) depth."
+    }
+  ],
+  "conditional_conclusion": {
+    "antecedent": "Not every language in L has a polynomial-size bounded-fan-in Boolean circuit family of depth o(log^2 n).",
+    "consequent": "There exists a log-precision nonlinear RNN requiring Omega(log^2 n) circuit depth to simulate."
+  }
+}

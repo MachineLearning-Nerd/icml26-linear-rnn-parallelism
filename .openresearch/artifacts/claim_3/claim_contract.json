@@ -1,0 +1,43 @@
+{
+  "claim_id": 3,
+  "statement": "There exists a one-layer log-precision nonlinear MLP RNN that exactly recognizes unary-encoded sorted deterministic graph connectivity, which is L-complete under FO reductions. Conditional on not every language in L admitting polynomial-size bounded-fan-in Boolean circuits of depth o(log^2 n), some such log-precision nonlinear RNN requires Omega(log^2 n) circuit depth to simulate.",
+  "quantifiers": {
+    "existential": [
+      "one fixed one-layer nonlinear MLP RNN",
+      "one fixed finite counter-machine construction"
+    ],
+    "universal": [
+      "every valid unary-encoded sorted deterministic graph-connectivity instance",
+      "every input length n"
+    ],
+    "obligation": "The RNN accepts exactly the reachable instances using O(log n)-bit state values."
+  },
+  "conditional_assumption": "Not every language in L has a polynomial-size bounded-fan-in Boolean circuit family of depth o(log^2 n).",
+  "assumptions": [
+    "Each source vertex has at most one outgoing edge.",
+    "Edges are ordered by strictly increasing source label and point forward in the topological order.",
+    "Vertices, source, and target are unary encoded with separators.",
+    "Counter values are integers and the ReLU MLP is evaluated exactly at O(log n) precision.",
+    "Deterministic graph connectivity is L-complete under FO reductions."
+  ],
+  "source": {
+    "archive_url": "https://export.arxiv.org/e-print/2603.03612",
+    "retrieved_at": "2026-07-30",
+    "sha256": "f1078eb9464172f9a941c1dd95354116ae749d64b91ec29947b47a588d2a1f9f",
+    "anchors": [
+      "3-nonlinear.tex:99-184 (definition, Proposition 2, Theorem 2, conditional corollary)",
+      "appendix-rnn.tex:70-117 (FO layered reduction)",
+      "appendix-rnn.tex:146-213 (counter invariant and RNN simulation)"
+    ],
+    "primary_reference": {
+      "title": "Problems complete for deterministic logarithmic space",
+      "authors": "Stephen A. Cook and Pierre McKenzie",
+      "year": 1987,
+      "doi": "10.1016/0196-6774(87)90018-6"
+    }
+  },
+  "pass_condition": "The layered FO-reduction schema preserves reachability, determinism, and sortedness; the counter invariant is reconstructed; the explicit ReLU zero mask is exact on integers; counter magnitudes imply O(log n) bits; the independent exhaustive checker covers its complete finite domain; the one-layer-copy control fails; and the depth conclusion remains explicitly conditional.",
+  "fail_condition": "Any source mismatch, derivation mismatch, reduction counterexample, zero-mask error, precision-bound error, negative-control pass, or dropped conditional assumption exits nonzero.",
+  "verdict_if_passed": "VERIFIED",
+  "limitations": "The certificate proves the construction and conditional implication; it does not resolve the open circuit lower bound for L. The exhaustive checker is a bug detector over a complete bounded domain, while the universal result comes from the parametric invariant and layered-reduction proof schema."
+}

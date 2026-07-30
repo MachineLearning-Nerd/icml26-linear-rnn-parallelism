@@ -1,0 +1,8 @@
+{
+  "claim": 3,
+  "status": "VERIFIED",
+  "conditional_lower_bound": true,
+  "integer_zero_mask_cases": 8193,
+  "negative_control": "one-layer copied graph is rejected",
+  "fixed_command": "uv run python repro/src/verify.py"
+}
