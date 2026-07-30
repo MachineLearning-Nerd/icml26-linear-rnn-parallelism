@@ -20,6 +20,7 @@ from claim2_proof import verify as verify_claim2
 from claim3_proof import verify as verify_claim3
 from claim4_proof import verify as verify_claim4
 from claim5_proof import verify as verify_claim5
+from claim6_proof import verify as verify_claim6
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "outputs"
@@ -241,6 +242,7 @@ def main():
         "claim_3": verify_claim3(),
         "claim_4": verify_claim4(),
         "claim_5": verify_claim5(),
+        "claim_6": verify_claim6(),
     }
     claims = {"claim_1_lrnn_pnc1": c1_lrnn_convolutional_pnc1(), "claim_2_near_log_depth": c2_near_log_depth(),
               "claim_3_log_precision_connectivity": c3_sorted_connectivity(), "claim_4_poly_precision_barrier": c4_poly_precision_stacks(),
@@ -264,7 +266,7 @@ def main():
                   "runtime_seconds": time.perf_counter() - started,
               }}
     (OUT / "verdict.json").write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
-    print(json.dumps({"all_claims_passed": result["all_claims_passed"], "claim_count": len(claims),
+    print(json.dumps({"all_claims_passed": result["all_claims_passed"], "claim_count": len(proof_claims),
                       "proof_claims": proof_claims, "compute": result["compute"]}, indent=2))
     if not evidence_suite_passed:
         raise SystemExit(1)

@@ -109,8 +109,24 @@ result. A valid `BLOCKED` evidence result exits zero while
 
 ## Raw result
 
-Pending this cumulative branch’s terminal run. Exact output, Git SHA,
-allocation, and runtime will be embedded by the next node.
+Terminal run `b147fc79-8d1f-4ddf-811b-254196e18d9e` completed at Git commit
+`b3f9564a106a1b367c9e2590ec65ea16035ec3f9`:
+
+```json
+{
+  "status": "BLOCKED",
+  "routes_completed": 4,
+  "rwkv_largest_stream_matrices": 257,
+  "deltanet_steps_per_matrix": 694,
+  "required_router_period": 1404,
+  "euler_phi": 432,
+  "all_exact_claims_resolved": false
+}
+```
+
+The verifier estimated one logical core, ran on Hugging Face `cpu-upgrade`
+with 64 logical and affinity CPUs available, and took 7.142337281 seconds
+(26-second job duration).
 
 ## What would unblock the claim
 
@@ -126,5 +142,5 @@ DeltaNet. The current evidence establishes neither.
 | 2 | Current Claim 2 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
 | 3 | Current Claim 3 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
 | 4 | Current Claim 4 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
-| 5 | This page | Yes | Pending terminal run | Pending terminal run | Yes | Yes | Yes | BLOCKED |
+| 5 | This page | Yes | Yes | Yes | Yes | Yes | Yes | BLOCKED |
 | 6 | None | No | No | No | No | No | No | BLOCKED |

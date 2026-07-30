@@ -1,0 +1,10 @@
+{
+  "rwkv_overwrite_parameter_cases": 144,
+  "rwkv_matrix_streams": 6,
+  "rwkv_largest_stream_matrices": 257,
+  "deltanet_general_9x9_cases": 5,
+  "deltanet_steps_per_matrix": 694,
+  "deltanet_available_tokens_per_superblock": 702,
+  "router_required_period": 1404,
+  "router_euler_phi": 432
+}

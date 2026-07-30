@@ -1,0 +1,13 @@
+{
+  "author_commit": "e6d2832c0be35b93630a094124ae8dbabcbfb18d",
+  "expected_splits": {
+    "train": 100000,
+    "id_1_100": 30000,
+    "ood_101_200": 30000,
+    "ood_201_300": 30000
+  },
+  "expected_reachability_accuracy": 1.0,
+  "expected_endpoint_signature_accuracy": 1.0,
+  "expected_negative_control_mismatches_per_split": 1,
+  "expected_checkpoint_architecture": "one-layer self-attention network, not an RNN"
+}

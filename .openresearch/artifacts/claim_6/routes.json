@@ -1,0 +1,24 @@
+{
+  "routes": [
+    {
+      "id": "released_artifact_audit",
+      "status": "completed_by_this_node",
+      "question": "Do the exact released data, code, and checkpoint support Figure 2?"
+    },
+    {
+      "id": "faithful_training_reconstruction",
+      "status": "pending",
+      "question": "Can a pinned CPU implementation reproduce the five model comparisons under one explicit interpretation of the paper protocol?"
+    },
+    {
+      "id": "architecture_and_protocol_sensitivity",
+      "status": "pending",
+      "question": "Does the result survive the paper/code conflicts in depth, batch size, learning rate, pooling, and dataset generation?"
+    },
+    {
+      "id": "falsification_attempt",
+      "status": "pending",
+      "question": "Can an assumption-satisfying run contradict the exact displayed empirical separation?"
+    }
+  ]
+}

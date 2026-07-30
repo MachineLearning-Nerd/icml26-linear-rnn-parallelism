@@ -1,0 +1,14 @@
+{
+  "run_id": "b147fc79-8d1f-4ddf-811b-254196e18d9e",
+  "git_sha": "b3f9564a106a1b367c9e2590ec65ea16035ec3f9",
+  "command": "uv run python repro/src/verify.py",
+  "backend": "Hugging Face cpu-upgrade",
+  "estimated_cores": 1,
+  "logical_cpus": 64,
+  "affinity_cpus": 64,
+  "verifier_runtime_seconds": 7.1423372810240835,
+  "job_duration_seconds": 26,
+  "status": "BLOCKED",
+  "routes_completed": 4,
+  "all_exact_claims_resolved": false
+}

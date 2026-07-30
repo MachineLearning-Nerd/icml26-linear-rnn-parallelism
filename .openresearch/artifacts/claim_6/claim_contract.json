@@ -1,0 +1,26 @@
+{
+  "claim": 6,
+  "statement": "Under the deterministic graph connectivity benchmark and training protocol used for Figure 2, a nonlinear RNN attains 100.00%, 98.60%, and 96.50% accuracy on lengths 1-100, 101-200, and 201-300, while Transformer, Mamba, RWKV-7, and DeltaNet attain the lower reported values; this empirical separation is attributed to the L-complete reachability computation.",
+  "paper_values_percent": {
+    "RNN": [100.0, 98.6, 96.5],
+    "RWKV-7": [100.0, 82.23, 72.44],
+    "DeltaNet": [77.87, 57.39, 50.0],
+    "Mamba": [74.99, 73.95, 50.95],
+    "Transformer": [95.6, 68.2, 62.15]
+  },
+  "quantifiers": "The displayed accuracies concern one released training/evaluation protocol and three finite length ranges; the paper does not report seeds or uncertainty intervals.",
+  "source": {
+    "url": "https://export.arxiv.org/e-print/2603.03612",
+    "retrieved_utc_date": "2026-07-30",
+    "sha256": "f1078eb9464172f9a941c1dd95354116ae749d64b91ec29947b47a588d2a1f9f",
+    "anchors": ["6-experiments.tex", "appendix-exp.tex", "LinearRNNs.tex:198"]
+  },
+  "primary_code": {
+    "url": "https://arg-git.informatik.uni-kl.de/pub/LinearRNN",
+    "commit": "e6d2832c0be35b93630a094124ae8dbabcbfb18d",
+    "retrieved_utc_date": "2026-07-30"
+  },
+  "current_verdict": "BLOCKED",
+  "blocker_after_route_1": "The release audit establishes exact data and code defects but contains no faithful five-model training results. The public release has no dependency lock or usable commands, provides no seeds or Figure 2 logs, and its sole DGC checkpoint is a self-attention model mislabeled as an RNN checkpoint.",
+  "limitations": "Route 1 is an exact audit of the public release, not a neural training reproduction and not a falsification of the displayed numerical results."
+}

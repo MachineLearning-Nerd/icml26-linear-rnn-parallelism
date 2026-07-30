@@ -1,0 +1,7 @@
+{
+  "name": "published zero-state RWKV schedule at N=1",
+  "published_first_destination": "0",
+  "expected_identity_destination": "1",
+  "observed": "rejected",
+  "scope": "invalidates the published schedule but not the existential theorem because BOS initialization repairs it"
+}
