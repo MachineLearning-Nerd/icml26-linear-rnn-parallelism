@@ -1,0 +1,8 @@
+{
+  "quadratic_controls": 4,
+  "efficient_vs_quadratic_max_abs_logit_difference": 2.9802322387695312e-08,
+  "accepted_tolerance": 1e-5,
+  "validation_examples": 90000,
+  "model": "released one-layer SAN-Simple checkpoint",
+  "heads": 4
+}

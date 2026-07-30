@@ -6,6 +6,7 @@ from pathlib import Path
 
 from claim6_release_audit import check as release_audit
 from claim6_checkpoint_eval import check as checkpoint_evaluation
+from claim6_generator_sensitivity import check as generator_sensitivity
 
 ROOT = Path(__file__).resolve().parents[2]
 ARTIFACT = ROOT / ".openresearch" / "artifacts" / "claim_6"
@@ -21,19 +22,25 @@ def verify():
         raise AssertionError("Claim 6 cannot be resolved by the release audit alone")
     if [route["id"] for route in routes["routes"]] != [
         "released_artifact_audit",
-        "faithful_training_reconstruction",
-        "architecture_and_protocol_sensitivity",
+        "released_checkpoint_evaluation",
+        "generator_repair_sensitivity",
         "falsification_attempt",
     ]:
         raise AssertionError("Claim 6 route plan changed")
 
-    released = release_audit(extra_check=checkpoint_evaluation)
+    def additional_evidence(local_files):
+        return {
+            "checkpoint_evaluation": checkpoint_evaluation(local_files),
+            "generator_sensitivity": generator_sensitivity(),
+        }
+
+    released = release_audit(extra_check=additional_evidence)
     return {
         "claim": 6,
         "status": "BLOCKED",
         "exact_contract": contract["statement"],
-        "routes_completed": 2,
+        "routes_completed": 3,
         "release_audit": released,
-        "blocker": contract["blocker_after_route_1"],
+        "blocker": contract["blocker_after_route_3"],
         "limitations": contract["limitations"],
     }

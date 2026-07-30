@@ -1,0 +1,5 @@
+{
+  "name": "invert the released decoder",
+  "expected": "negate every control logit",
+  "observed": "negated every control logit"
+}

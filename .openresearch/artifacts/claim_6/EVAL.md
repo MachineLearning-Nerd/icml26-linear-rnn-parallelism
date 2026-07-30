@@ -18,3 +18,7 @@ validation examples, and negates the decoder as a parameter-level control.
 
 These routes leave Claim 6 `BLOCKED`; they supply no faithful five-model
 training result.
+
+Route 3 requires every corrected-generator label to match reachability, the
+endpoint shortcut to fall below 55% in every tested configuration, and the
+released zero-initialization control to restore 100% shortcut accuracy.

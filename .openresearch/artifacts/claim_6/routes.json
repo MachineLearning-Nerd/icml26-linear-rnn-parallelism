@@ -6,13 +6,13 @@
       "question": "Do the exact released data, code, and checkpoint support Figure 2?"
     },
     {
-      "id": "faithful_training_reconstruction",
-      "status": "completed_by_this_node",
+      "id": "released_checkpoint_evaluation",
+      "status": "completed",
       "question": "Can the sole pinned released checkpoint reproduce any displayed model row under its exact released evaluation protocol?"
     },
     {
-      "id": "architecture_and_protocol_sensitivity",
-      "status": "pending",
+      "id": "generator_repair_sensitivity",
+      "status": "completed_by_this_node",
       "question": "Does the result survive the paper/code conflicts in depth, batch size, learning rate, pooling, and dataset generation?"
     },
     {

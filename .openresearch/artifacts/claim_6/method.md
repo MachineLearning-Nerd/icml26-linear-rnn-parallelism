@@ -19,3 +19,10 @@ the final EOS output is scored and there is one attention layer, the evaluator
 computes only the final query. A separate quadratic implementation of the
 released source algebra must match its logits to `1e-6` before the optimized
 evaluator is accepted.
+
+Route 3 repairs only the generator's impossible sentinel condition: interior
+vertices start as unassigned rather than bucket zero. It independently
+regenerates the paper's 10,000-example test-bin scale for `p` in
+`{0.1, 0.5, 0.9}` and three fixed seeds, verifies every label by graph
+reachability, and measures the endpoint-only shortcut. Restoring the released
+zero initialization is the matched control.

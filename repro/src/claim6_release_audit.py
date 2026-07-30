@@ -260,5 +260,5 @@ def check(extra_check=None):
             },
         }
         if extra_check is not None:
-            result["checkpoint_evaluation"] = extra_check(local_files)
+            result.update(extra_check(local_files))
         return result

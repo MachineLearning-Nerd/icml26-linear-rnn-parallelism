@@ -22,5 +22,6 @@
   },
   "current_verdict": "BLOCKED",
   "blocker_after_route_1": "The release audit establishes exact data and code defects but contains no faithful five-model training results. The public release has no dependency lock or usable commands, provides no seeds or Figure 2 logs, and its sole DGC checkpoint is a self-attention model mislabeled as an RNN checkpoint.",
+  "blocker_after_route_3": "Three distinct routes establish that the release is defective, its only checkpoint diverges sharply from Figure 2, and repairing the generator removes the exact endpoint shortcut. None identifies the unavailable Figure 2 seeds, checkpoints, executable environment, or one consistent five-model protocol. Confidence remains LOW, so the dedicated falsification route is mandatory.",
   "limitations": "Route 1 is an exact audit of the public release, not a neural training reproduction and not a falsification of the displayed numerical results."
 }

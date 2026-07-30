@@ -1,0 +1,17 @@
+{
+  "run_id": "614b8914-1f6d-49e3-8ee4-751bd61d8c96",
+  "git_sha": "46b9254482c2464a59bece4142c0f41ea86c3268",
+  "command": "uv run python repro/src/verify.py",
+  "backend": "Hugging Face cpu-upgrade",
+  "estimated_cores": 64,
+  "logical_cpus": 64,
+  "affinity_cpus": 64,
+  "verifier_runtime_seconds": 213.3988397330977,
+  "job_duration_seconds": 238,
+  "efficient_vs_quadratic_max_abs_logit_difference": 2.9802322387695312e-08,
+  "splits": {
+    "id_1_100": {"correct": 15756, "examples": 30000, "accuracy": 0.5252, "wilson_95": [0.519546396337342, 0.5308471508381146], "paper": 0.956},
+    "ood_101_200": {"correct": 15005, "examples": 30000, "accuracy": 0.5001666666666666, "wilson_95": [0.49450907918206427, 0.505824211473858], "paper": 0.682},
+    "ood_201_300": {"correct": 15266, "examples": 30000, "accuracy": 0.5088666666666667, "wilson_95": [0.503208854514009, 0.514522208381059], "paper": 0.6215}
+  }
+}

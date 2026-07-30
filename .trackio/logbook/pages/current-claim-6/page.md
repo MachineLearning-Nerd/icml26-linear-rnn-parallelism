@@ -1,6 +1,6 @@
 # Current verification - Claim 6
 
-**Current verdict: BLOCKED after routes 1-2 of 4.**
+**Current verdict: BLOCKED after routes 1-3 of 4.**
 
 ## Exact claim and paper values
 
@@ -51,9 +51,27 @@ The only released DGC checkpoint is evaluated as the one-layer, four-head
 last-query evaluator avoids unnecessary quadratic attention work; it must first
 match a separate quadratic implementation on deterministic controls.
 
-All 90,000 released validation examples are evaluated and compared to the
-Transformer row of Figure 2. Exact accuracies and intervals are pending this
-node's terminal run.
+All 90,000 released validation examples were evaluated:
+
+| Split | Released checkpoint | Figure 2 Transformer | Absolute gap |
+| --- | ---: | ---: | ---: |
+| 1-100 | 52.52% | 95.60% | 43.08 points |
+| 101-200 | 50.0167% | 68.20% | 18.1833 points |
+| 201-300 | 50.8867% | 62.15% | 11.2633 points |
+
+The efficient and quadratic evaluators agree within `2.98e-8`. The terminal
+run used 64 logical CPUs, took 213.398840 seconds in the verifier, and completed
+in 238 seconds.
+
+## Route 3 - generator repair sensitivity
+
+Only the impossible sentinel is repaired: interior vertices start unassigned
+rather than in bucket zero. The paper's 10,000-example test-bin scale is
+regenerated for `p` in `{0.1, 0.5, 0.9}` and seeds `0`, `1`, and `260303612`.
+Every label must still equal graph reachability. The endpoint shortcut is
+measured against a matched control that restores the released bug.
+
+Exact route-3 statistics are pending this node's terminal run.
 
 ## Why this does not resolve Claim 6
 
