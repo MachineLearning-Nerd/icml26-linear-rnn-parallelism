@@ -118,14 +118,18 @@ missing. Claim 6 therefore remains `BLOCKED`, not `VERIFIED` or `FALSIFIED`.
 uv run python repro/src/verify.py
 ```
 
-Current verifier:
+Evaluator-visible current verifier and records:
 
-- `repro/src/claim6_proof.py`
-- `repro/src/claim6_release_audit.py`
-- `repro/src/claim6_checkpoint_eval.py`
-- `repro/src/claim6_generator_sensitivity.py`
-- `repro/src/claim6_falsification.py`
-- `.openresearch/artifacts/claim_6/claim_contract.json`
+- [cumulative proof checker](../../repro/src/claim6_proof.py)
+- [release audit](../../repro/src/claim6_release_audit.py)
+- [checkpoint evaluator](../../repro/src/claim6_checkpoint_eval.py)
+- [generator sensitivity](../../repro/src/claim6_generator_sensitivity.py)
+- [falsification qualifier](../../repro/src/claim6_falsification.py)
+- [claim contract](../../evidence/claim_6/claim_contract.json)
+- [route 1 raw output](../../evidence/claim_6/raw_route_1.json)
+- [route 2 raw output](../../evidence/claim_6/raw_route_2.json)
+- [route 3 raw output](../../evidence/claim_6/raw_route_3.json)
+- [route 4 raw output](../../evidence/claim_6/raw_route_4.json)
 
 ## Visibility matrix
 

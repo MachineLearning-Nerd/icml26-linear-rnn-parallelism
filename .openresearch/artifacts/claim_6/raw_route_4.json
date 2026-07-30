@@ -1,0 +1,37 @@
+{
+  "run_id": "3722216e-11a8-4b94-8c21-80922a99e902",
+  "git_sha": "59c144cdb1c9fe438d857e8e70d69c2aecce32de",
+  "fixed_command": "uv run python repro/src/verify.py",
+  "compute": {
+    "requested": "Hugging Face cpu-upgrade",
+    "estimated_useful_cores": 64,
+    "logical_cpus": 64,
+    "affinity_cpus": 64,
+    "verifier_runtime_seconds": 262.8483322630018,
+    "job_runtime_seconds": 291
+  },
+  "release_inventory": {
+    "tree_entries": 170,
+    "blobs": 152,
+    "commit_count": 2,
+    "dgc_checkpoint_count": 1,
+    "dependency_locks": 0,
+    "dgc_mamba_launchers": 0
+  },
+  "required_counterexample_identities": [
+    "released_dataset_identity",
+    "figure_model_row_identity",
+    "figure_checkpoint_identity",
+    "figure_training_protocol_identity",
+    "stochastic_run_identity"
+  ],
+  "accepted_as_falsification": {
+    "released_checkpoint_divergence": false,
+    "repaired_generator_shortcut_collapse": false,
+    "released_endpoint_rule": false
+  },
+  "negative_control": "checkpoint divergence without Figure identity was rejected",
+  "checker_control": "fully identified hypothetical result was accepted",
+  "falsification_succeeded": false,
+  "verdict": "BLOCKED"
+}

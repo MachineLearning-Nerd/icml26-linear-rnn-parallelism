@@ -96,12 +96,14 @@ does not establish that no other four-layer DeltaNet construction exists.
 uv run python repro/src/verify.py
 ```
 
-Current code and records:
+Evaluator-visible current code and records:
 
-- `repro/src/claim5_proof.py`
-- `repro/src/claim5_independent.py`
-- `.openresearch/artifacts/claim_5/claim_contract.json`
-- `.openresearch/artifacts/claim_5/routes.json`
+- [proof checker](../../repro/src/claim5_proof.py)
+- [independent checker](../../repro/src/claim5_independent.py)
+- [claim contract](../../evidence/claim_5/claim_contract.json)
+- [four-route record](../../evidence/claim_5/routes.json)
+- [raw result](../../evidence/claim_5/raw_run.json)
+- [negative-control output](../../evidence/claim_5/negative_control_output.json)
 
 The evidence suite exits nonzero on any missing route or altered arithmetic
 result. A valid `BLOCKED` evidence result exits zero while
@@ -143,4 +145,4 @@ DeltaNet. The current evidence establishes neither.
 | 3 | Current Claim 3 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
 | 4 | Current Claim 4 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
 | 5 | This page | Yes | Yes | Yes | Yes | Yes | Yes | BLOCKED |
-| 6 | None | No | No | No | No | No | No | BLOCKED |
+| 6 | Current Claim 6 | Yes | Yes | Yes | Yes | Yes | Yes | BLOCKED |

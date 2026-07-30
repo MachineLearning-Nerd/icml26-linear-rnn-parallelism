@@ -1,0 +1,22 @@
+{
+  "candidate_file_count": 128,
+  "canonical_files_opened": [
+    "README.md",
+    "pages/index.md",
+    "pages/current-claim-1/page.md",
+    "pages/current-claim-2/page.md",
+    "pages/current-claim-3/page.md",
+    "pages/current-claim-4/page.md",
+    "pages/current-claim-5/page.md",
+    "pages/current-claim-6/page.md",
+    "pages/release-overview/page.md"
+  ],
+  "judged_file_count": 16,
+  "old_file_set_is_subset": true,
+  "passed": true,
+  "protected_historical_files_unchanged": 11,
+  "secret_hits": 0,
+  "text_only_upload": true,
+  "upload_file_count": 115,
+  "visibility_matrix_complete": true
+}

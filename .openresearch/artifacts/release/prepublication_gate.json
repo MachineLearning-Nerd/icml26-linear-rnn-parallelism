@@ -1,0 +1,28 @@
+{
+  "paper": "2603.03612",
+  "space_id": "DineshAI/29sn1uqWn3",
+  "judged_revision": "7060a61044f1907faf21d782d76e232ed7cae692",
+  "judged_external_manifest_sha256": "f352e226df9f3241fd0aeaf644d68ad14428ede052f12612804aad4c323c142f",
+  "candidate_file_count": 128,
+  "judged_file_count": 16,
+  "upload_file_count": 115,
+  "upload_allowlist_sha256": "323a681023ac2bd712b821769074157f326cefae3e249ab7a99f2393c70fd8f5",
+  "candidate_manifest_sha256": "17da144a138b886812067b882d5a47bdbea961fb4ff8d2b3c7eb387435966a29",
+  "checks": {
+    "all_claims_have_terminal_evidence_verdict": true,
+    "cumulative_regression_suite_pending_release_candidate_run": true,
+    "judge_criticisms_answered": true,
+    "raw_data_regenerates_from_fixed_command": true,
+    "negative_controls_fail_as_intended": true,
+    "no_toy_result_claimed_as_full_scale": true,
+    "judged_file_set_is_subset": true,
+    "protected_historical_files_unchanged": true,
+    "candidate_logbook_valid": true,
+    "upload_allowlist_is_text_only": true,
+    "secret_hits": 0,
+    "visibility_matrix_complete": true,
+    "blind_red_team_repeated_after_fix": true
+  },
+  "publication_eligible": false,
+  "remaining_gate": "Commit, push, and complete the release-candidate cumulative run."
+}

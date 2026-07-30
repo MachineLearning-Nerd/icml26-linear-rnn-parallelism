@@ -83,12 +83,12 @@ uv run python repro/src/verify.py
 ```
 
 Environment: Python 3.12 with `uv.lock`; requested compute will be Hugging Face
-`cpu-upgrade`. Current code:
+`cpu-upgrade`. Evaluator-visible current code:
 
-- `repro/src/claim3_proof.py`
-- `repro/src/claim3_independent.py`
-- `.openresearch/artifacts/claim_3/claim_contract.json`
-- `.openresearch/artifacts/claim_3/certificate.json`
+- [proof checker](../../repro/src/claim3_proof.py)
+- [independent checker](../../repro/src/claim3_independent.py)
+- [claim contract](../../evidence/claim_3/claim_contract.json)
+- [certificate](../../evidence/claim_3/certificate.json)
 
 Any dropped condition, reduction mismatch, zero-mask error, precision error,
 or control pass exits nonzero.
@@ -117,9 +117,9 @@ Run `f5341b8c-3fbd-4b7e-8e05-30c5fe3740a9` reached `done` at Git SHA
 
 Downloadable records:
 
-- `.openresearch/artifacts/claim_3/raw_run.json`
-- `.openresearch/artifacts/claim_3/checker_output.json`
-- `.openresearch/artifacts/claim_3/negative_control_output.json`
+- [raw run](../../evidence/claim_3/raw_run.json)
+- [checker output](../../evidence/claim_3/checker_output.json)
+- [negative-control output](../../evidence/claim_3/negative_control_output.json)
 
 ## Limitations
 
@@ -135,6 +135,6 @@ claim.
 | 1 | Current Claim 1 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
 | 2 | Current Claim 2 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
 | 3 | This page | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
-| 4 | Historical only | No | No | No | No | Toy only | No | BLOCKED |
-| 5 | Historical only | No | No | No | No | Toy only | No | BLOCKED |
-| 6 | None | No | No | No | No | No | No | BLOCKED |
+| 4 | Current Claim 4 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
+| 5 | Current Claim 5 | Yes | Yes | Yes | Yes | Yes | Yes | BLOCKED |
+| 6 | Current Claim 6 | Yes | Yes | Yes | Yes | Yes | Yes | BLOCKED |

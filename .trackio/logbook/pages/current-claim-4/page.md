@@ -94,12 +94,12 @@ uv run python repro/src/verify.py
 ```
 
 Environment: Python 3.12 with `uv.lock`; requested compute will be Hugging Face
-`cpu-upgrade`. Current code:
+`cpu-upgrade`. Evaluator-visible current code:
 
-- `repro/src/claim4_proof.py`
-- `repro/src/claim4_independent.py`
-- `.openresearch/artifacts/claim_4/claim_contract.json`
-- `.openresearch/artifacts/claim_4/certificate.json`
+- [proof checker](../../repro/src/claim4_proof.py)
+- [independent checker](../../repro/src/claim4_independent.py)
+- [claim contract](../../evidence/claim_4/claim_contract.json)
+- [certificate](../../evidence/claim_4/certificate.json)
 
 Any lost gap, algebra error, precision mismatch, missing padding/condition, or
 negative-control pass exits nonzero.
@@ -129,9 +129,9 @@ Run `8f632753-ee79-42cf-9efb-382708f42638` reached `done` at Git SHA
 
 Downloadable records:
 
-- `.openresearch/artifacts/claim_4/raw_run.json`
-- `.openresearch/artifacts/claim_4/checker_output.json`
-- `.openresearch/artifacts/claim_4/negative_control_output.json`
+- [raw run](../../evidence/claim_4/raw_run.json)
+- [checker output](../../evidence/claim_4/checker_output.json)
+- [negative-control output](../../evidence/claim_4/negative_control_output.json)
 
 ## Limitations
 
@@ -147,5 +147,5 @@ input token. The circuit consequence remains conditional on `NC != P`.
 | 2 | Current Claim 2 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
 | 3 | Current Claim 3 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
 | 4 | This page | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
-| 5 | Historical only | No | No | No | No | Toy only | No | BLOCKED |
-| 6 | None | No | No | No | No | No | No | BLOCKED |
+| 5 | Current Claim 5 | Yes | Yes | Yes | Yes | Yes | Yes | BLOCKED |
+| 6 | Current Claim 6 | Yes | Yes | Yes | Yes | Yes | Yes | BLOCKED |

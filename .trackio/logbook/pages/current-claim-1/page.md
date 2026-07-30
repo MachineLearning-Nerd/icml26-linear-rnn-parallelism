@@ -80,12 +80,12 @@ Environment: Python 3.12, dependencies pinned by `uv.lock`, official CPU-only
 PyTorch 2.8.0 index. Seed: `260303612`. Requested compute: Hugging Face
 `cpu-upgrade`; estimated requirement: one CPU core.
 
-Current source:
+Evaluator-visible current source:
 
-- `repro/src/claim1_proof.py` — fail-closed symbolic/resource checker
-- `repro/src/claim1_independent.py` — independent exact-integer checker
-- `.openresearch/artifacts/claim_1/claim_contract.json` — full contract
-- `.openresearch/artifacts/claim_1/certificate.json` — proof certificate
+- [fail-closed symbolic/resource checker](../../repro/src/claim1_proof.py)
+- [independent exact-integer checker](../../repro/src/claim1_independent.py)
+- [full claim contract](../../evidence/claim_1/claim_contract.json)
+- [proof certificate](../../evidence/claim_1/certificate.json)
 
 The command exits nonzero on a source-hash mismatch, missing lemma, symbolic
 identity failure, resource mismatch, independent-checker mismatch, or a
@@ -119,9 +119,9 @@ Run `0010393c-cfa3-406f-b00a-62f3530b7bd8` reached `done` at Git SHA
 
 Downloadable records:
 
-- `.openresearch/artifacts/claim_1/raw_run.json`
-- `.openresearch/artifacts/claim_1/checker_output.json`
-- `.openresearch/artifacts/claim_1/negative_control_output.json`
+- [raw run](../../evidence/claim_1/raw_run.json)
+- [checker output](../../evidence/claim_1/checker_output.json)
+- [negative-control output](../../evidence/claim_1/negative_control_output.json)
 
 ## Limitations
 
@@ -135,8 +135,8 @@ trusted library lemmas rather than re-proving those foundations.
 | Claim | Canonical page | Code visible | Data inline | Raw link | Checker | Control | Exact claim tested | Reviewer verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | This page | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
-| 2 | Historical only | No | No | No | No | Toy only | No | BLOCKED |
-| 3 | Historical only | No | No | No | No | Toy only | No | BLOCKED |
-| 4 | Historical only | No | No | No | No | Toy only | No | BLOCKED |
-| 5 | Historical only | No | No | No | No | Toy only | No | BLOCKED |
-| 6 | None | No | No | No | No | No | No | BLOCKED |
+| 2 | Current Claim 2 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
+| 3 | Current Claim 3 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
+| 4 | Current Claim 4 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
+| 5 | Current Claim 5 | Yes | Yes | Yes | Yes | Yes | Yes | BLOCKED |
+| 6 | Current Claim 6 | Yes | Yes | Yes | Yes | Yes | Yes | BLOCKED |

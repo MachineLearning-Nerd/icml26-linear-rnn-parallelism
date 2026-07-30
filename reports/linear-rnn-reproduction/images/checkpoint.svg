@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <rect width="1200" height="520" fill="#fff"/>
+  <text x="70" y="55" fill="#111827" font-family="sans-serif" font-size="30" font-weight="700">The only released checkpoint does not match Figure 2</text>
+  <text x="70" y="88" fill="#6b7280" font-family="sans-serif" font-size="18">Exact accuracy on all 90,000 released validation examples</text>
+  <line x1="250" y1="120" x2="250" y2="430" stroke="#9ca3af"/>
+  <g font-family="sans-serif" font-size="18">
+    <text x="70" y="185" fill="#111827">1–100</text>
+    <text x="70" y="285" fill="#111827">101–200</text>
+    <text x="70" y="385" fill="#111827">201–300</text>
+    <rect x="250" y="145" width="765" height="30" fill="#4f46e5"/><text x="1025" y="168" fill="#111827">95.60%</text>
+    <rect x="250" y="180" width="420" height="30" fill="#f59e0b"/><text x="680" y="203" fill="#111827">52.52%</text>
+    <rect x="250" y="245" width="546" height="30" fill="#4f46e5"/><text x="806" y="268" fill="#111827">68.20%</text>
+    <rect x="250" y="280" width="400" height="30" fill="#f59e0b"/><text x="660" y="303" fill="#111827">50.0167%</text>
+    <rect x="250" y="345" width="497" height="30" fill="#4f46e5"/><text x="757" y="368" fill="#111827">62.15%</text>
+    <rect x="250" y="380" width="407" height="30" fill="#f59e0b"/><text x="667" y="403" fill="#111827">50.8867%</text>
+  </g>
+  <rect x="250" y="458" width="24" height="18" fill="#4f46e5"/><text x="285" y="473" fill="#374151" font-family="sans-serif" font-size="16">Figure 2 Transformer</text>
+  <rect x="520" y="458" width="24" height="18" fill="#f59e0b"/><text x="555" y="473" fill="#374151" font-family="sans-serif" font-size="16">Released one-layer SAN-Simple checkpoint</text>
+</svg>

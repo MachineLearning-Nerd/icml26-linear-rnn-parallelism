@@ -64,12 +64,12 @@ uv run python repro/src/verify.py
 ```
 
 Environment: Python 3.12 with `uv.lock`; requested compute will be Hugging Face
-`cpu-upgrade`. Current source:
+`cpu-upgrade`. Evaluator-visible current source:
 
-- `repro/src/claim2_proof.py`
-- `repro/src/claim2_independent.py`
-- `.openresearch/artifacts/claim_2/claim_contract.json`
-- `.openresearch/artifacts/claim_2/certificate.json`
+- [proof checker](../../repro/src/claim2_proof.py)
+- [independent checker](../../repro/src/claim2_independent.py)
+- [claim contract](../../evidence/claim_2/claim_contract.json)
+- [certificate](../../evidence/claim_2/certificate.json)
 
 The command exits nonzero on a source/DOI mismatch, missing derivation step,
 symbolic-depth mismatch, exact-rational mismatch, or a control that passes.
@@ -102,9 +102,9 @@ Run `5b01911b-996a-48c2-bca1-015477c22888` reached `done` at Git SHA
 
 Downloadable records:
 
-- `.openresearch/artifacts/claim_2/raw_run.json`
-- `.openresearch/artifacts/claim_2/checker_output.json`
-- `.openresearch/artifacts/claim_2/negative_control_output.json`
+- [raw run](../../evidence/claim_2/raw_run.json)
+- [checker output](../../evidence/claim_2/checker_output.json)
+- [negative-control output](../../evidence/claim_2/negative_control_output.json)
 
 ## Limitations
 
@@ -118,7 +118,7 @@ constants and does not imply the historical exact sampled formula.
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Current Claim 1 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
 | 2 | This page | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
-| 3 | Historical only | No | No | No | No | Toy only | No | BLOCKED |
-| 4 | Historical only | No | No | No | No | Toy only | No | BLOCKED |
-| 5 | Historical only | No | No | No | No | Toy only | No | BLOCKED |
-| 6 | None | No | No | No | No | No | No | BLOCKED |
+| 3 | Current Claim 3 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
+| 4 | Current Claim 4 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |
+| 5 | Current Claim 5 | Yes | Yes | Yes | Yes | Yes | Yes | BLOCKED |
+| 6 | Current Claim 6 | Yes | Yes | Yes | Yes | Yes | Yes | BLOCKED |

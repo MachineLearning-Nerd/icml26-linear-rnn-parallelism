@@ -2,7 +2,7 @@
   "schema_version": 1,
   "title": "Repro - Why Are Linear RNNs More Parallelizable?",
   "emoji": "🎯",
-  "space_id": null,
+  "space_id": "DineshAI/29sn1uqWn3",
   "paper": null,
   "tags": [
     "icml2026-repro",
@@ -10,12 +10,18 @@
     "theory",
     "rnn"
   ],
-  "updated_at": "2026-07-29T11:58:47+00:00",
+  "updated_at": "2026-07-30T18:00:00+00:00",
   "root": {
     "slug": "index",
     "title": "Repro - Why Are Linear RNNs More Parallelizable?",
     "file": "pages/index.md",
     "children": [
+      {
+        "slug": "release-overview",
+        "title": "Release overview - exact evidence first",
+        "file": "pages/release-overview/page.md",
+        "children": []
+      },
       {
         "slug": "current-claim-6",
         "title": "Current verification - Claim 6",
