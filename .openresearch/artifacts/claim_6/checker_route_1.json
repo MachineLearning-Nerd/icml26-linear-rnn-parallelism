@@ -1,0 +1,10 @@
+{
+  "pointer_and_bfs_checkers_agreed": true,
+  "labels_checked": 190000,
+  "label_mismatches": 0,
+  "endpoint_signature_correct": 190000,
+  "generator_sampling_branch_reachable": false,
+  "unsupported_rnn_shell_flags": ["--post_act_clip", "--tf32"],
+  "rnn_final_evaluation_argument_mismatch": true,
+  "released_checkpoint_architecture": "one-layer self-attention network, not an RNN"
+}

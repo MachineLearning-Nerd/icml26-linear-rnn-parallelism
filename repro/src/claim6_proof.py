@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 
 from claim6_release_audit import check as release_audit
+from claim6_checkpoint_eval import check as checkpoint_evaluation
 
 ROOT = Path(__file__).resolve().parents[2]
 ARTIFACT = ROOT / ".openresearch" / "artifacts" / "claim_6"
@@ -26,12 +27,12 @@ def verify():
     ]:
         raise AssertionError("Claim 6 route plan changed")
 
-    released = release_audit()
+    released = release_audit(extra_check=checkpoint_evaluation)
     return {
         "claim": 6,
         "status": "BLOCKED",
         "exact_contract": contract["statement"],
-        "routes_completed": 1,
+        "routes_completed": 2,
         "release_audit": released,
         "blocker": contract["blocker_after_route_1"],
         "limitations": contract["limitations"],

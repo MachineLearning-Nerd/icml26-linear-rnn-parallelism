@@ -1,6 +1,6 @@
 # Current verification - Claim 6
 
-**Current verdict: BLOCKED after route 1 of 4.**
+**Current verdict: BLOCKED after routes 1-2 of 4.**
 
 ## Exact claim and paper values
 
@@ -39,14 +39,27 @@ The source audit found:
 - the only DGC checkpoint, named `best_model_SAN-Simple_RNN_RELU.pt`, contains
   one-layer self-attention tensors and no RNN tensors.
 
-Exact split statistics and terminal runtime are pending this node's remote run.
+The terminal release audit checked 190,000 examples. Reachability and the
+endpoint-only signature were both exactly 100% accurate on all four splits.
+The run used Hugging Face `cpu-upgrade`, exposed 64 logical CPUs, took
+39.959394 seconds in the verifier, and completed in 63 seconds.
+
+## Route 2 - exact released-checkpoint evaluation
+
+The only released DGC checkpoint is evaluated as the one-layer, four-head
+`SAN-Simple` architecture encoded by its tensor names and launcher. An exact
+last-query evaluator avoids unnecessary quadratic attention work; it must first
+match a separate quadratic implementation on deterministic controls.
+
+All 90,000 released validation examples are evaluated and compared to the
+Transformer row of Figure 2. Exact accuracies and intervals are pending this
+node's terminal run.
 
 ## Why this does not resolve Claim 6
 
-The audit is direct evidence that the public release cannot reproduce Figure 2
-as supplied and that the released benchmark has a shortcut. It is not a
-five-model neural training run and does not contradict the displayed
-accuracies. Claim 6 therefore remains `BLOCKED`.
+The audits are direct evidence about the public release and its sole checkpoint.
+They are not a faithful five-model neural training run. Claim 6 therefore
+remains `BLOCKED`.
 
 ## Reproduction
 

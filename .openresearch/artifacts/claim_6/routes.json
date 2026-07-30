@@ -2,13 +2,13 @@
   "routes": [
     {
       "id": "released_artifact_audit",
-      "status": "completed_by_this_node",
+      "status": "completed",
       "question": "Do the exact released data, code, and checkpoint support Figure 2?"
     },
     {
       "id": "faithful_training_reconstruction",
-      "status": "pending",
-      "question": "Can a pinned CPU implementation reproduce the five model comparisons under one explicit interpretation of the paper protocol?"
+      "status": "completed_by_this_node",
+      "question": "Can the sole pinned released checkpoint reproduce any displayed model row under its exact released evaluation protocol?"
     },
     {
       "id": "architecture_and_protocol_sensitivity",

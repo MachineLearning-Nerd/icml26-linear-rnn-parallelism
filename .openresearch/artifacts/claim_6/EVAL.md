@@ -12,4 +12,9 @@ the generator and launcher defects, and architecture identification of the
 released checkpoint. Flipping one real label per split is the negative control
 and must be rejected.
 
-This route leaves Claim 6 `BLOCKED`; it supplies no five-model training result.
+Route 2 additionally requires exact agreement between quadratic and
+last-query-only self-attention evaluation, evaluates all 90,000 released
+validation examples, and negates the decoder as a parameter-level control.
+
+These routes leave Claim 6 `BLOCKED`; they supply no faithful five-model
+training result.

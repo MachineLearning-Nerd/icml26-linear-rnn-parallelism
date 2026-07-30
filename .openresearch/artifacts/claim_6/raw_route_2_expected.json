@@ -1,0 +1,13 @@
+{
+  "checkpoint_sha256": "1ef309cbf7ce5e2b30b6c52f10ed5a24623b0a090ca4560282413c886e6bf23d",
+  "model": "released one-layer SAN-Simple checkpoint",
+  "heads": 4,
+  "validation_examples": 90000,
+  "quadratic_crosscheck_tolerance": 1e-5,
+  "paper_transformer_accuracy": {
+    "id_1_100": 0.956,
+    "ood_101_200": 0.682,
+    "ood_201_300": 0.6215
+  },
+  "observed_accuracy": "pending terminal run"
+}

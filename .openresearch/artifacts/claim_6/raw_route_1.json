@@ -1,0 +1,24 @@
+{
+  "run_id": "2237e33d-1712-4233-9367-e1c263516239",
+  "git_sha": "fd6dc0170c68c5259fbebd0427df6ada928dfde0",
+  "command": "uv run python repro/src/verify.py",
+  "backend": "Hugging Face cpu-upgrade",
+  "estimated_cores": 1,
+  "logical_cpus": 64,
+  "affinity_cpus": 64,
+  "verifier_runtime_seconds": 39.95939388102852,
+  "job_duration_seconds": 63,
+  "author_commit": "e6d2832c0be35b93630a094124ae8dbabcbfb18d",
+  "splits": {
+    "train": {"examples": 100000, "positives": 50000, "reachability_accuracy": 1.0, "endpoint_signature_accuracy": 1.0},
+    "id_1_100": {"examples": 30000, "positives": 15000, "reachability_accuracy": 1.0, "endpoint_signature_accuracy": 1.0},
+    "ood_101_200": {"examples": 30000, "positives": 15000, "reachability_accuracy": 1.0, "endpoint_signature_accuracy": 1.0},
+    "ood_201_300": {"examples": 30000, "positives": 15000, "reachability_accuracy": 1.0, "endpoint_signature_accuracy": 1.0}
+  },
+  "checkpoint": {
+    "sha256": "1ef309cbf7ce5e2b30b6c52f10ed5a24623b0a090ca4560282413c886e6bf23d",
+    "tensor_count": 7,
+    "transformer_attention_tensor_count": 4,
+    "rnn_tensor_count": 0
+  }
+}

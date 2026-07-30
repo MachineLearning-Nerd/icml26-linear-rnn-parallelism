@@ -12,3 +12,10 @@ when it contains both an edge out of the source and an edge into the target.
 The source checker audits the unreachable sampling branch and incompatible RNN
 launcher. The checkpoint is loaded with PyTorch's restricted `weights_only`
 loader and classified from its tensor names.
+
+Route 2 evaluates that checkpoint as the one-layer four-head `SAN-Simple`
+architecture named by its tensor structure and released launcher. Because only
+the final EOS output is scored and there is one attention layer, the evaluator
+computes only the final query. A separate quadratic implementation of the
+released source algebra must match its logits to `1e-6` before the optimized
+evaluator is accepted.
