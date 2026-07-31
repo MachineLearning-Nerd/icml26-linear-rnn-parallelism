@@ -9,11 +9,11 @@ zero tests yields 24,085/29,367 (82.0138%), below the 24,328/29,367 majority
 baseline (82.8413%). This is an expressivity ablation, not the missing
 five-model training comparison.
 
-[Current verifier](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/repro/src/verify.py) ·
-[implementation](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/repro/src/judge_accepted_checks.py) ·
-[raw](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/evidence/current/claim_6/raw.json) ·
-[checker](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/evidence/current/claim_6/checker_output.json) ·
-[control](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/evidence/current/claim_6/negative_control_output.json)
+[Current verifier](../../repro/src/verify.py) ·
+[implementation](../../repro/src/judge_accepted_checks.py) ·
+[raw](../../evidence/current/claim_6/raw.json) ·
+[checker](../../evidence/current/claim_6/checker_output.json) ·
+[control](../../evidence/current/claim_6/negative_control_output.json)
 
 **Current verdict: BLOCKED after all four required routes.**
 

@@ -9,11 +9,11 @@ A wrong coefficient produces nonzero error. But the rational 2×2 router would
 need period 1,404, with `φ(1404)=432`; no valid fixed rational four-layer
 replacement was established.
 
-[Current verifier](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/repro/src/verify.py) ·
-[implementation](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/repro/src/judge_accepted_checks.py) ·
-[raw](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/evidence/current/claim_5/raw.json) ·
-[checker](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/evidence/current/claim_5/checker_output.json) ·
-[control](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/evidence/current/claim_5/negative_control_output.json)
+[Current verifier](../../repro/src/verify.py) ·
+[implementation](../../repro/src/judge_accepted_checks.py) ·
+[raw](../../evidence/current/claim_5/raw.json) ·
+[checker](../../evidence/current/claim_5/checker_output.json) ·
+[control](../../evidence/current/claim_5/negative_control_output.json)
 
 **Verdict: BLOCKED after four distinct routes.**
 

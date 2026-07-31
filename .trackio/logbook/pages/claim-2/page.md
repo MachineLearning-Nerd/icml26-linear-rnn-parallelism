@@ -7,11 +7,11 @@ balanced scan depth exactly. The audit separately checks five log-star tower
 boundaries, exact rational gate substitution, and bit growth. The appendix's
 printed rational-addition denominator is rejected as the negative control.
 
-[Current verifier](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/repro/src/verify.py) ·
-[implementation](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/repro/src/judge_accepted_checks.py) ·
-[raw](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/evidence/current/claim_2/raw.json) ·
-[checker](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/evidence/current/claim_2/checker_output.json) ·
-[control](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/evidence/current/claim_2/negative_control_output.json)
+[Current verifier](../../repro/src/verify.py) ·
+[implementation](../../repro/src/judge_accepted_checks.py) ·
+[raw](../../evidence/current/claim_2/raw.json) ·
+[checker](../../evidence/current/claim_2/checker_output.json) ·
+[control](../../evidence/current/claim_2/negative_control_output.json)
 
 **Candidate verdict: VERIFIED by a compositional depth certificate.**
 

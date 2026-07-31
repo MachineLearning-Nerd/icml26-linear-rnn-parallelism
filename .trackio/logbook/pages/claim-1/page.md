@@ -7,11 +7,11 @@ affine scans, 50 recurrence/convolution identities, the symbolic affine-monoid
 certificate, and the exact `ceil(log2 n)` resource induction. All errors are
 zero. Reversing noncommuting transitions produces nonzero error.
 
-[Current verifier](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/repro/src/verify.py) ·
-[implementation](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/repro/src/judge_accepted_checks.py) ·
-[raw](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/evidence/current/claim_1/raw.json) ·
-[checker](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/evidence/current/claim_1/checker_output.json) ·
-[control](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/evidence/current/claim_1/negative_control_output.json)
+[Current verifier](../../repro/src/verify.py) ·
+[implementation](../../repro/src/judge_accepted_checks.py) ·
+[raw](../../evidence/current/claim_1/raw.json) ·
+[checker](../../evidence/current/claim_1/checker_output.json) ·
+[control](../../evidence/current/claim_1/negative_control_output.json)
 
 **Verdict: VERIFIED by a parametric proof certificate.**
 

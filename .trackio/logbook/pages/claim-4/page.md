@@ -8,11 +8,11 @@ depth 14, performs 200 seeded round trips through depth 200, evaluates all
 across 60 monotone circuits. Replacing `AND = ReLU(a+b-1)` by
 `ReLU(a+b-2)` is rejected on five assignments of the control circuit.
 
-[Current verifier](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/repro/src/verify.py) ·
-[implementation](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/repro/src/judge_accepted_checks.py) ·
-[raw](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/evidence/current/claim_4/raw.json) ·
-[checker](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/evidence/current/claim_4/checker_output.json) ·
-[control](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/evidence/current/claim_4/negative_control_output.json)
+[Current verifier](../../repro/src/verify.py) ·
+[implementation](../../repro/src/judge_accepted_checks.py) ·
+[raw](../../evidence/current/claim_4/raw.json) ·
+[checker](../../evidence/current/claim_4/checker_output.json) ·
+[control](../../evidence/current/claim_4/negative_control_output.json)
 
 **Candidate verdict: VERIFIED by a corrected exact construction.**
 

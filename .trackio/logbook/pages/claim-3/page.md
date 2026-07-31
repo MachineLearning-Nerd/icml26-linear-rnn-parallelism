@@ -8,11 +8,11 @@ reference walk, counter machine, and integer-exact ReLU RNN agree everywhere.
 Removing the nonzero-index guard causes 636 errors on the complete five-vertex
 domain. Lengths 100, 200, and 300 are additional horizon checks.
 
-[Current verifier](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/repro/src/verify.py) ·
-[implementation](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/repro/src/judge_accepted_checks.py) ·
-[raw](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/evidence/current/claim_3/raw.json) ·
-[checker](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/evidence/current/claim_3/checker_output.json) ·
-[control](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/blob/main/evidence/current/claim_3/negative_control_output.json)
+[Current verifier](../../repro/src/verify.py) ·
+[implementation](../../repro/src/judge_accepted_checks.py) ·
+[raw](../../evidence/current/claim_3/raw.json) ·
+[checker](../../evidence/current/claim_3/checker_output.json) ·
+[control](../../evidence/current/claim_3/negative_control_output.json)
 
 **Candidate verdict: VERIFIED, including the exact conditional qualifier.**
 
