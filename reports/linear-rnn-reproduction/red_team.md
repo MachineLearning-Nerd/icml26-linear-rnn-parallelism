@@ -1,9 +1,10 @@
 # Evaluator-blind pre-publication red team
 
-The reviewer used only the freshly staged candidate at
-`/tmp/linear-rnn-candidate-current.YsEzjf` and the evaluator rubric. Repository
-knowledge, OpenResearch logs, experiment descriptions, and hidden dashboard
-paths were not used to fill gaps.
+The reviewer used only a fresh candidate rebuilt after the evaluator-link
+repair and the evaluator rubric. The candidate was staged from the immutable
+judged revision, not incrementally edited. Repository knowledge, OpenResearch
+logs, experiment descriptions, and hidden dashboard paths were not used to
+fill gaps.
 
 ## Pass 1 — historical candidate rejected
 
@@ -12,7 +13,7 @@ weak historical verification page. The reviewer could not locate the current
 claim contracts, executable symbolic checkers, or raw results. That candidate
 was rejected and is retained only as historical evidence.
 
-## Pass 2 — current candidate accepted for release gating
+## Pass 2 — post-fix candidate accepted for release gating
 
 Files opened from the canonical entrypoint:
 
@@ -27,7 +28,8 @@ Files opened from the canonical entrypoint:
 9. `pages/claim-6/page.md`
 10. `pages/conclusion/page.md`
 11. every current verifier, implementation, raw JSON, checker output, and
-    negative-control output linked from those pages
+    negative-control output linked from those pages; every link resolved
+    within the staged candidate
 
 Reviewer conclusions:
 

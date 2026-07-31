@@ -52,6 +52,16 @@ b147fc79-8d1f-4ddf-811b-254196e18d9e
 18bcc462-fbed-4e4b-8af2-9295100aff38
 ```
 
+Release-candidate attempts stopped before producing scientific output:
+
+```text
+313534bd-4a73-4816-a795-ab3218a398de  superseded before execution by release-path correction
+5bbb5800-20d9-4972-9570-f12401558a5f  superseded before execution by release-count correction
+4744e432-bb59-43c2-86fd-3115cdd694a1  superseded before execution by candidate-local link correction
+2b2c0509-f824-47ce-8b29-62186129813b  infrastructure failure: invalid container digest; no code executed
+2b8f82dd-b1f4-4a0b-a602-4961f9b63be2  stopped during final blind-review provenance correction
+```
+
 ## Local short validations
 
 ```bash
