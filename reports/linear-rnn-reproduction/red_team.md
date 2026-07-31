@@ -44,12 +44,12 @@ Automated companion audit:
 
 ```json
 {
-  "candidate_file_count": 174,
+  "candidate_file_count": 175,
   "judged_file_count": 128,
   "old_file_set_is_subset": true,
   "protected_historical_files_preserved": 128,
-  "superseded_paths_archived": 14,
-  "upload_file_count": 60,
+  "superseded_paths_archived": 15,
+  "upload_file_count": 62,
   "text_only_upload": true,
   "secret_hits": 0,
   "visibility_matrix_complete": true
