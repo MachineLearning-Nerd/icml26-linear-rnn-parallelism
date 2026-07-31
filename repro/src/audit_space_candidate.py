@@ -34,51 +34,46 @@ missing_old = sorted(judged_files - candidate_files)
 if missing_old:
     raise AssertionError(f"judged files missing from candidate: {missing_old}")
 
-protected = {
-    "pages/overview/page.md",
-    "pages/claims/page.md",
-    "pages/evidence/page.md",
-    "pages/verification-run/page.md",
-    "index.html",
-    "logbook.css",
-    "logbook.js",
-    "bucket-icon.svg",
-    "trackio-logo-light.png",
-    "trackio-logo.png",
-    "trackio-wordmark-dark.png",
-}
-changed_protected = sorted(
-    path for path in protected if sha256(candidate / path) != sha256(judged / path)
+changed_old = sorted(
+    path
+    for path in judged_files
+    if sha256(candidate / path) != sha256(judged / path)
 )
-if changed_protected:
-    raise AssertionError(f"protected historical files changed: {changed_protected}")
+history_root = candidate / "history" / "0ed661087f8d19456bed65a9efafc2f6e750be0c"
+missing_history = [
+    path
+    for path in changed_old
+    if not (history_root / path).is_file()
+    or sha256(history_root / path) != sha256(judged / path)
+]
+if missing_history:
+    raise AssertionError(f"superseded judged bytes are not preserved: {missing_history}")
 
 logbook = json.loads((candidate / "logbook.json").read_text())
-children = logbook["root"]["children"]
-slugs = [child["slug"] for child in children]
-expected_current = [
-    "release-overview",
-    "current-claim-6",
-    "current-claim-5",
-    "current-claim-4",
-    "current-claim-3",
-    "current-claim-2",
-    "current-claim-1",
+slugs = [child["slug"] for child in logbook["root"]["children"]]
+expected = [
+    "executive-summary",
+    "claim-1",
+    "claim-2",
+    "claim-3",
+    "claim-4",
+    "claim-5",
+    "claim-6",
+    "conclusion",
 ]
-if slugs[:7] != expected_current:
-    raise AssertionError("current evidence is not first in navigation")
-if any(
-    not child["title"].startswith("Historical rejected baseline")
-    for child in children[7:]
-):
-    raise AssertionError("historical pages are not labeled as rejected baselines")
+if slugs != expected:
+    raise AssertionError(f"canonical navigation mismatch: {slugs}")
 
 canonical = [candidate / "README.md", candidate / "pages/index.md"]
 canonical.extend(
-    candidate / f"pages/current-claim-{claim}/page.md"
-    for claim in range(1, 7)
+    candidate / f"pages/claim-{claim}/page.md" for claim in range(1, 7)
 )
-canonical.append(candidate / "pages/release-overview/page.md")
+canonical.extend(
+    [
+        candidate / "pages/executive-summary/page.md",
+        candidate / "pages/conclusion/page.md",
+    ]
+)
 link_pattern = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 broken_links = []
 opened = []
@@ -95,24 +90,27 @@ for page in canonical:
 if broken_links:
     raise AssertionError(f"broken evaluator-visible links: {broken_links}")
 
-overview = (candidate / "pages/release-overview/page.md").read_text()
-required_overview_phrases = [
-    "Previous live judged score: 5/12",
-    "Conservative forecast: 5-9/12",
-    "Best-supported possible score: 9/12",
-    "| 1 | Current Claim 1 | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |",
-    "| 6 | Current Claim 6 | Yes | Yes | Yes | Yes | Yes | Yes | BLOCKED |",
-    "uv run python repro/src/verify.py",
+executive = (candidate / "pages/executive-summary/page.md").read_text()
+conclusion = (candidate / "pages/conclusion/page.md").read_text()
+required = [
+    (executive, "Previous live judged score"),
+    (executive, "uv run python repro/src/verify.py"),
+    (executive, "29,367"),
+    (conclusion, "9–11/12"),
+    (conclusion, "| 1 | [Claim 1](#/claim-1) | Yes | Yes | Yes | Yes | Yes | Yes | VERIFIED |"),
+    (conclusion, "| 6 | [Claim 6](#/claim-6) | Yes | Yes | Yes | Yes | Yes | Yes | BLOCKED |"),
 ]
-missing_phrases = [
-    phrase for phrase in required_overview_phrases if phrase not in overview
-]
-if missing_phrases:
-    raise AssertionError(f"overview is missing release facts: {missing_phrases}")
+missing = [phrase for text, phrase in required if phrase not in text]
+if missing:
+    raise AssertionError(f"canonical pages are missing release facts: {missing}")
 
-allowlist = [
-    line for line in allowlist_path.read_text().splitlines() if line.strip()
-]
+for claim in range(1, 7):
+    page = (candidate / f"pages/claim-{claim}/page.md").read_text()
+    for path in ("raw.json", "checker_output.json", "negative_control_output.json"):
+        if f"evidence/current/claim_{claim}/{path}" not in page:
+            raise AssertionError(f"Claim {claim} does not expose {path}")
+
+allowlist = [line for line in allowlist_path.read_text().splitlines() if line.strip()]
 if allowlist != sorted(allowlist):
     raise AssertionError("upload allowlist is not sorted")
 if any(path not in candidate_files for path in allowlist):
@@ -126,10 +124,11 @@ for path in allowlist:
 secret_pattern = re.compile(
     r"(hf_[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY-----)"
 )
-secret_hits = []
-for path in allowlist:
-    if secret_pattern.search((candidate / path).read_text()):
-        secret_hits.append(path)
+secret_hits = [
+    path
+    for path in allowlist
+    if secret_pattern.search((candidate / path).read_text())
+]
 if secret_hits:
     raise AssertionError(f"possible secrets in candidate: {secret_hits}")
 
@@ -138,7 +137,8 @@ result = {
     "judged_file_count": len(judged_files),
     "candidate_file_count": len(candidate_files),
     "old_file_set_is_subset": True,
-    "protected_historical_files_unchanged": len(protected),
+    "protected_historical_files_preserved": len(judged_files),
+    "superseded_paths_archived": len(changed_old),
     "canonical_files_opened": opened,
     "upload_file_count": len(allowlist),
     "text_only_upload": True,

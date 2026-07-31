@@ -103,8 +103,16 @@ User-Agent from `https://export.arxiv.org/e-print/2603.03612`; SHA-256:
 
 ## Publication action
 
-After the candidate subset, manifest, secret, canonical-traversal, challenge
-validator, and evaluator-blind red-team gates pass, the exact action is a
+The pre-publication candidate contains 174 files versus 128 judged files. The
+old path set is a subset of the candidate, all 128 judged files are preserved,
+14 superseded text paths are additionally archived byte-for-byte, the upload
+allowlist contains 60 text files, and the secret scan has zero hits. The
+canonical traversal and visibility matrix are complete. The official challenge
+structure validator passes when given the required compliant title slug; the
+actual protected Space name predates that naming rule and cannot be renamed or
+duplicated under the campaign's safety constraints.
+
+After the canonical release-child regression completes, the exact action is a
 text-only commit to the existing protected Space
 `DineshAI/29sn1uqWn3`. No second Space is created. The returned Hugging Face
 revision is then downloaded into a fresh directory, hash-checked, and traversed

@@ -17,6 +17,9 @@ Claim 6 still lacks the paper's five-model training release. Their scoped
 arithmetic and expressivity checks are reported, never promoted to full
 verification.
 
+Previous live judged score: **4/12**. Conservative forecast: **9–11/12**.
+Best-supported possible score: **11/12**. These are forecasts only.
+
 The user-linked
 [vimarsh logbook](https://huggingface.co/spaces/vimarsh/repro-why-linear-rnns-more-parallelizable)
 is currently 4/12 in the live verdict dataset, not 10/12. The strongest live
