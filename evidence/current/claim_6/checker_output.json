@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "status": "BLOCKED",
+  "checks": ["constructive nonlinear RNN", "complete expressivity domain", "four-route release audit"],
+  "unresolved": "no faithful five-model Figure 2 training release",
+  "verifier": "repro/src/verify.py"
+}

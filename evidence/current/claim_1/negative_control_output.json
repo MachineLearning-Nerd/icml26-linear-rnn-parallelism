@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "control": "reverse noncommuting transition order",
+  "expected": "nonzero exact error",
+  "observed": "nonzero exact error"
+}

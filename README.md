@@ -1,27 +1,31 @@
 # Why Are Linear RNNs More Parallelizable?
 
-## Reproduction status — exact certificates and release audit
+## Reproduction status — exact arithmetic, exhaustive domains, visible evidence
 
 This CPU-only campaign tests all six claims from ICML 2026 paper
 `29sn1uqWn3`, *Why Are Linear RNNs More Parallelizable?* (arXiv `2603.03612`).
-Claims 1-4 are `VERIFIED` by parametric certificates. Claim 5 is `BLOCKED`
-because the published exact rational DeltaNet router cannot have its required
-period, while the broader existential remains open. Claim 6 is `BLOCKED`
-after four routes because the Figure 2 checkpoints, seeds, logs, locked
-environment, and one consistent five-model protocol are unavailable.
+Claims 1–4 are `VERIFIED` by exact arithmetic, complete bounded domains, and
+source-anchored certificates. Claim 5 is `BLOCKED` because the published exact
+rational DeltaNet router cannot have its required period, while the broader
+existential remains open. Claim 6 is `BLOCKED` because no faithful five-model
+Figure 2 training release exists.
 
-The strongest empirical result is an exact evaluation of the sole released
-DGC checkpoint over all 90,000 validation examples:
+The strongest current result is the complete sorted deterministic graph domain
+through six vertices:
 
-| Split | Paper Transformer | Released checkpoint | Difference |
-| --- | ---: | ---: | ---: |
-| 1-100 | 95.60% | 52.52% | -43.08 points |
-| 101-200 | 68.20% | 50.0167% | -18.1833 points |
-| 201-300 | 62.15% | 50.8867% | -11.2633 points |
+| Evidence | Observed result | Assessment |
+| --- | ---: | --- |
+| Sorted-DGC counter and ReLU RNN | 29,367 / 29,367 | Exact complete domain through 6 vertices |
+| Guard-removed control | 636 errors / 3,000 | Fails for the intended reason |
+| LRNN scans / convolution forms | 132 / 132; 50 / 50 | Zero rational error |
+| Monotone-CVP assignments | 1,568 / 1,568 | Exact bounded-domain check |
+| RWKV / DeltaNet products | 280 / 280; 75 / 75 | Scoped evidence; Claim 5 remains BLOCKED |
+| Nonlinear / linearized graph solver | 100%; 82.0138% | Expressivity ablation; not Figure 2 training |
 
-The checkpoint is a one-layer self-attention model despite its
-`SAN-Simple_RNN_RELU` filename. This divergence is not called a falsification,
-because the release does not identify it as the Figure 2 checkpoint.
+The formal cumulative run passed on Hugging Face `cpu-upgrade` with one
+algorithm thread in 1129.264 seconds. No GPU was used. The public logbook puts
+the exact claim, code, raw JSON, independent checker, and negative control on
+each canonical claim page.
 
 [Read the illustrated report](reports/linear-rnn-reproduction/report.md) or
 [open the self-contained tutorial notebook](notebooks/linear_rnn_reproduction.py).
@@ -51,7 +55,8 @@ formal node inherited the exact command shown below.
 | [`orx/c6-released-checkpoint-exact-evaluation`](https://github.com/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/tree/orx/c6-released-checkpoint-exact-evaluation) | Evaluate 90k examples | `uv run python repro/src/verify.py` | 11.26-43.08 point Figure gaps | HF cpu-upgrade, 238s |
 | [`orx/c6-generator-repair-sensitivity-audit`](https://github.com/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/tree/orx/c6-generator-repair-sensitivity-audit) | 270k repaired examples | `uv run python repro/src/verify.py` | Shortcut collapses to 50.00-54.83% | HF cpu-upgrade, 249s |
 | [`orx/c6-exact-assumption-falsification-qualification`](https://github.com/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/tree/orx/c6-exact-assumption-falsification-qualification) | Mandatory falsification route | `uv run python repro/src/verify.py` | No qualified counterexample; BLOCKED | HF cpu-upgrade, 291s |
+| [`orx/exact-arithmetic-and-exhaustive-theory-audits`](https://github.com/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/tree/orx/exact-arithmetic-and-exhaustive-theory-audits) | Match the strongest live judged exact checks and rerun every prior audit | `uv run python repro/src/verify.py` | C1–4 VERIFIED; C5–6 BLOCKED | HF cpu-upgrade, 1129.264s verifier |
 
-Previous live judged score: `5/12`. Conservative forecast after publication:
-`5-9/12`; best-supported possible score: `9/12`. These are forecasts only. The
+Previous live judged score: `4/12`. Conservative forecast after publication:
+`9-11/12`; best-supported possible score: `11/12`. These are forecasts only. The
 live judge has not evaluated this revision.

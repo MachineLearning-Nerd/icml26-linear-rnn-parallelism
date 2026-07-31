@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "status": "VERIFIED",
+  "checks": ["symbolic affine associativity", "exact balanced scan", "exact convolution form", "depth induction"],
+  "verifier": "repro/src/verify.py"
+}

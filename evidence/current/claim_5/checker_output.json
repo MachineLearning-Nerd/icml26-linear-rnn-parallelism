@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "status": "BLOCKED",
+  "checks": ["exact RWKV arithmetic", "exact DeltaNet arithmetic", "transvection identities", "four-route theorem audit"],
+  "unresolved": "no valid fixed rational four-layer DeltaNet router",
+  "verifier": "repro/src/verify.py"
+}

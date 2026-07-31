@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "status": "VERIFIED",
+  "checks": ["exact balanced depth", "log-star tower boundaries", "rational-gate substitution", "bit-growth bound"],
+  "verifier": "repro/src/verify.py"
+}

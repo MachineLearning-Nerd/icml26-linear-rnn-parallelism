@@ -1,0 +1,13 @@
+{
+  "status": "VERIFIED",
+  "contract": "A gapped exact-rational stack, two-stack language recognizer, and monotone-CVP ReLU evaluator realize the poly-precision nonlinear-RNN mechanism.",
+  "complete_stack_states": 32767,
+  "random_stack_roundtrips": 200,
+  "maximum_stack_depth": 200,
+  "anbncn_exhaustive_strings": 29524,
+  "anbncn_matches": 29524,
+  "monotone_circuits": 60,
+  "monotone_cvp_assignments": 1568,
+  "monotone_cvp_matches": 1568,
+  "formal_run": "../formal_run.json"
+}

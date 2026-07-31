@@ -1,0 +1,188 @@
+<!-- DESIGN DIRECTION (Step 2.5, locked)
+  concept:        midnight evidence ledger — a precise audit board, not a celebratory poster
+  axis1 layout:   4-column with full-width metric hero (focal: 29,367 exhaustive instances)
+  axis2 canvas:   near-black navy, flat, full
+  axis3 palette:  dual-semantic; cobalt=verified, amber=blocked
+  axis4 type:     grotesque body + mono numerals
+  axis5 density:  balanced
+  axis6 card:     dark slabs, thin luminous frame, flat
+  axis7 heading:  number chip + trailing rule
+  axis8 masthead: left-aligned brand band; footer contact strip
+  devices:        metric scoreboard, evidence wall
+  hero moment:    29,367 complete graph instances — the only oversized element
+  soft-clash notes: none tripped
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="posterly">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reproduction evidence poster — Why Are Linear RNNs More Parallelizable?</title>
+<style>
+@page { size: 60in 36in; margin: 0; }
+:root {
+  /* ===== DESIGN TOKENS ===== */
+  --u: 1.6px;
+  --bg: #07111f;
+  --surface: #0d1b2d;
+  --surface-2: #12243a;
+  --ink: #f4f7fb;
+  --muted: #aebdd0;
+  --accent: #4f8cff;
+  --accent-soft: #142d55;
+  --emph: #ffb84d;
+  --emph-soft: #3a2810;
+  --line: #29435e;
+  --line-emph: #7d5b27;
+  --grid: rgba(79,140,255,.05);
+  --dark-ink: #06101e;
+  --mark: #607b99;
+  --fs-1: calc(7 * var(--u));
+  --fs-2: calc(8 * var(--u));
+  --fs-3: calc(10 * var(--u));
+  --fs-4: calc(12 * var(--u));
+  --fs-5: calc(16 * var(--u));
+  --fs-6: calc(22 * var(--u));
+  --fs-7: calc(28 * var(--u));
+  --fs-8: calc(32 * var(--u));
+  --fs-9: calc(37 * var(--u));
+  --font-sans: "Inter", "Helvetica Neue", sans-serif;
+  --font-mono: "Menlo", "Consolas", monospace;
+  /* ===== END DESIGN TOKENS ===== */
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+body { font-family: var(--font-sans); }
+.poster {
+  width: calc(750 * var(--u));
+  height: calc(450 * var(--u));
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  gap: calc(8 * var(--u));
+  padding: calc(18 * var(--u));
+  background:
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    var(--bg);
+  background-size: calc(24 * var(--u)) calc(24 * var(--u));
+  position: relative;
+}
+.header { display: flex; justify-content: space-between; align-items: flex-start; gap: calc(16 * var(--u)); }
+.eyebrow, .kicker { color: var(--accent); font-size: var(--fs-3); font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+h1 { margin: calc(3 * var(--u)) 0 0; max-width: calc(560 * var(--u)); font-size: var(--fs-7); line-height: 1.02; letter-spacing: -.03em; text-wrap: balance; }
+.badge { border: 1px solid var(--line); padding: calc(7 * var(--u)) calc(10 * var(--u)); color: var(--muted); font: 700 var(--fs-3)/1.25 var(--font-mono); }
+.hero { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: calc(14 * var(--u)); background: var(--accent-soft); border: 1px solid var(--accent); padding: calc(9 * var(--u)) calc(14 * var(--u)); }
+.hero-number { font: 900 var(--fs-9)/1 var(--font-mono); color: var(--ink); letter-spacing: -.04em; }
+.hero-copy strong { display: block; font-size: var(--fs-4); }
+.hero-copy span { display: block; margin-top: calc(2 * var(--u)); color: var(--muted); font-size: var(--fs-2); }
+.hero-verdict { padding: calc(5 * var(--u)) calc(8 * var(--u)); background: var(--accent); color: var(--dark-ink); font-weight: 900; font-size: var(--fs-2); }
+.body { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: calc(8 * var(--u)); min-height: 0; }
+.column { min-width: 0; display: flex; }
+.card { width: 100%; background: var(--surface); border: 1px solid var(--line); padding: calc(10 * var(--u)); display: flex; flex-direction: column; min-height: 0; }
+.card.blocked { border-color: var(--line-emph); background: linear-gradient(180deg, var(--surface), var(--emph-soft)); }
+.card h2 { display: flex; align-items: center; gap: calc(6 * var(--u)); margin: 0 0 calc(8 * var(--u)); font-size: var(--fs-5); line-height: 1.1; }
+.num { display: inline-grid; place-items: center; width: calc(22 * var(--u)); height: calc(22 * var(--u)); flex: 0 0 auto; background: var(--accent); color: var(--dark-ink); font: 900 var(--fs-3)/1 var(--font-mono); }
+.blocked .num { background: var(--emph); }
+.status { margin-left: auto; font: 800 var(--fs-1)/1 var(--font-mono); color: var(--accent); }
+.blocked .status { color: var(--emph); }
+.metric { margin: calc(5 * var(--u)) 0; padding: calc(6 * var(--u)); background: var(--surface-2); border-left: calc(2 * var(--u)) solid var(--accent); }
+.blocked .metric { border-left-color: var(--emph); }
+.metric b { display: block; font: 900 var(--fs-6)/1 var(--font-mono); }
+.metric span { color: var(--muted); font-size: var(--fs-3); }
+.card p, .card li { color: var(--muted); font-size: var(--fs-4); line-height: 1.4; text-wrap: pretty; }
+.card p { margin: calc(4 * var(--u)) 0; }
+.card ul { margin: calc(4 * var(--u)) 0 0; padding-left: calc(12 * var(--u)); }
+.ladder { flex: 1; display: grid; grid-template-rows: repeat(4, minmax(0, 1fr)); gap: calc(5 * var(--u)); margin-top: calc(8 * var(--u)); }
+.step { display: grid; grid-template-columns: calc(70 * var(--u)) minmax(0,1fr); align-items: center; gap: calc(7 * var(--u)); padding: calc(6 * var(--u)); background: var(--surface-2); border-left: 1px solid var(--line); }
+.step b { color: var(--ink); font: 900 var(--fs-3)/1.1 var(--font-mono); text-transform: uppercase; white-space: nowrap; text-wrap: balance; }
+.step span { color: var(--muted); font-size: var(--fs-3); line-height: 1.25; text-wrap: pretty; }
+.contract { margin-top: calc(6 * var(--u)); padding-top: calc(6 * var(--u)); border-top: 1px solid var(--line); color: var(--ink) !important; }
+.footer { display: flex; align-items: center; justify-content: space-between; gap: calc(12 * var(--u)); min-height: calc(18 * var(--u)); color: var(--muted); font: 700 var(--fs-1)/1.3 var(--font-mono); }
+.footer strong { color: var(--ink); }
+.ps-sprite { width: 0; height: 0; position: absolute; overflow: hidden; }
+.corner-sig { position: absolute; right: calc(5 * var(--u)); bottom: calc(5 * var(--u)); width: calc(7 * var(--u)); height: calc(7 * var(--u)); color: var(--mark); }
+[data-ps-mark="woven"] { display: inline-block; width: .82em; height: .82em; vertical-align: -.06em; color: var(--accent); }
+[data-ps-mark="woven"] svg, .corner-sig svg { width: 100%; height: 100%; fill: currentColor; }
+@media print {
+  :root { --u: 1mm; }
+  html, body { width: 60in; height: 36in; }
+  .poster { width: 100%; height: 100%; margin: 0; }
+}
+@media (max-width: 900px) {
+  .poster { transform-origin: top left; }
+}
+</style>
+</head>
+<body>
+<main class="poster" data-measure-role="poster" data-posterly-contract="identity-v1" data-ps-identity="on">
+  <svg class="ps-sprite" data-color-exempt="logo" aria-hidden="true"><defs><symbol id="psReg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" stroke-width="8"/><line x1="50" y1="7" x2="50" y2="93" stroke="currentColor" stroke-width="8"/><line x1="7" y1="50" x2="93" y2="50" stroke="currentColor" stroke-width="8"/></symbol></defs></svg>
+  <header class="header" data-measure-role="header">
+    <div>
+      <div class="eyebrow">OpenResearch · exact CPU reproduction</div>
+      <h1>Why Are Linear RNNs More Parallelizable?</h1>
+    </div>
+    <div class="badge">arXiv 2603.03612<br>OpenReview 29sn1uqWn3</div>
+  </header>
+  <section class="hero" data-measure-role="banner">
+    <div class="hero-number">29,367</div>
+    <div class="hero-copy"><strong>complete sorted deterministic graph instances</strong><span>reference walk = counter machine = integer-exact ReLU RNN; guard control fails 636 times</span></div>
+    <div class="hero-verdict">EXHAUSTIVE</div>
+  </section>
+  <section class="body" data-measure-role="body">
+    <div class="column" data-measure-role="column"><article class="card" data-measure-role="card">
+      <h2><span class="num">1</span> LRNN → PNC¹ <span class="status">VERIFIED</span></h2>
+      <div class="metric"><b>132 + 50</b><span>exact scans + convolution forms</span></div>
+      <ul><li>Zero rational error</li><li>Symbolic affine associativity</li><li>Balanced depth = ceil(log₂ n)</li></ul>
+      <div class="ladder">
+        <div class="step"><b>Domain</b><span>Dimensions 1–3, eleven horizons, four deterministic seeds.</span></div>
+        <div class="step"><b>Compiler</b><span>Each affine step is lifted to a fixed-width homogeneous matrix.</span></div>
+        <div class="step"><b>Checker</b><span>Sequential and balanced products agree entry-by-entry over Q.</span></div>
+        <div class="step"><b>Control</b><span>Reverse order breaks noncommuting products exactly as intended.</span></div>
+      </div>
+      <p class="contract">Exact fixed-width affine recurrence, every length; cited uniformity lemma audited separately.</p>
+    </article></div>
+    <div class="column" data-measure-role="column"><article class="card" data-measure-role="card">
+      <h2><span class="num">2–4</span> Complexity mechanisms <span class="status">VERIFIED</span></h2>
+      <div class="metric"><b>22 / 32,767 / 1,568</b><span>depth sizes / stack states / CVP assignments</span></div>
+      <ul><li>Exact log-star boundaries</li><li>29,524 bounded language strings</li><li>All controls fail for intended reasons</li></ul>
+      <div class="ladder">
+        <div class="step"><b>C2</b><span>Exact scan depth through n=65,536 plus tower boundaries.</span></div>
+        <div class="step"><b>C3</b><span>Complete sorted-DGC domain through six vertices.</span></div>
+        <div class="step"><b>C4</b><span>Gapped rational stack and complete bounded language domain.</span></div>
+        <div class="step"><b>CVP</b><span>Every assignment of 60 seeded monotone circuits is checked.</span></div>
+      </div>
+      <p class="contract">Certificates retain exact quantifiers and identify cited completeness machinery as a trusted dependency.</p>
+    </article></div>
+    <div class="column" data-measure-role="column"><article class="card blocked" data-measure-role="card">
+      <h2><span class="num">5</span> Four-layer DPLR <span class="status">BLOCKED</span></h2>
+      <div class="metric"><b>280 + 75</b><span>exact RWKV + DeltaNet arithmetic products</span></div>
+      <ul><li>98 transvections exact</li><li>694 H-steps per matrix</li><li>Router needs period 1,404</li></ul>
+      <div class="ladder">
+        <div class="step"><b>Route 1</b><span>Reconstruct the four-layer arithmetic schedule.</span></div>
+        <div class="step"><b>Route 2</b><span>Check the fixed DPLR decomposition symbolically.</span></div>
+        <div class="step"><b>Route 3</b><span>Search exact rational router constructions.</span></div>
+        <div class="step"><b>Route 4</b><span>Falsification audit isolates the invalid router lemma.</span></div>
+      </div>
+      <p class="contract">Arithmetic passes, but φ(1404)=432 blocks the published rational 2×2 router; no replacement is claimed.</p>
+    </article></div>
+    <div class="column" data-measure-role="column"><article class="card blocked" data-measure-role="card">
+      <h2><span class="num">6</span> Figure 2 training <span class="status">BLOCKED</span></h2>
+      <div class="metric"><b>100% vs 82.01%</b><span>nonlinear construction vs linearized control</span></div>
+      <ul><li>Complete 29,367-instance ablation</li><li>900/900 across three length bands</li><li>No faithful five-model training release</li></ul>
+      <div class="ladder">
+        <div class="step"><b>Route 1</b><span>Audit the released generator and all 190,000 examples.</span></div>
+        <div class="step"><b>Route 2</b><span>Evaluate the sole released checkpoint on 90,000 examples.</span></div>
+        <div class="step"><b>Route 3</b><span>Repair generator defects and run sensitivity analysis.</span></div>
+        <div class="step"><b>Route 4</b><span>Seek an assumption-valid falsification; none qualifies.</span></div>
+      </div>
+      <p class="contract">This verifies expressivity, not the paper's empirical comparison<span data-ps-mark="woven" data-color-exempt="logo" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#psReg"/></svg></span></p>
+    </article></div>
+  </section>
+  <footer class="footer" data-measure-role="footer"><span><strong>Fixed command:</strong> uv run python repro/src/verify.py</span><span>HF cpu-upgrade · 1 thread · 1129.264 s · no GPU</span><span>Previous live score remains 4/12 pending judge</span></footer>
+  <span class="corner-sig on-dark" data-ps-mark="corner" data-color-exempt="logo" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#psReg"/></svg></span>
+</main>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "paper": "29sn1uqWn3",
+  "arxiv": "2603.03612",
+  "git_sha": "f9a8331fd1deadaef45c02d7399ac116562bac4e",
+  "run_id": "18bcc462-fbed-4e4b-8af2-9295100aff38",
+  "job_url": "https://huggingface.co/jobs/DineshAI/6a6c0a0cb36a6516e96a3678",
+  "fixed_command": "uv run python repro/src/verify.py",
+  "suite_passed": true,
+  "statuses": {
+    "claim_1": "VERIFIED",
+    "claim_2": "VERIFIED",
+    "claim_3": "VERIFIED",
+    "claim_4": "VERIFIED",
+    "claim_5": "BLOCKED",
+    "claim_6": "BLOCKED"
+  },
+  "compute": {
+    "estimated_required_cores": 1,
+    "selected_backend": "Hugging Face",
+    "selected_flavor": "cpu-upgrade",
+    "logical_cpus_visible": 64,
+    "affinity_cpus": 64,
+    "algorithm_threads": 1,
+    "runtime_seconds": 1129.264233395923,
+    "gpu_used": false
+  }
+}

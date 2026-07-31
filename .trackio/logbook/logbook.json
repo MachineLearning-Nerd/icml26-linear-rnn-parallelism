@@ -1,87 +1,29 @@
 {
   "schema_version": 2,
-  "title": "Repro - Why Are Linear RNNs More Parallelizable?",
-  "emoji": "🎯",
-  "space_id": null,
-  "paper": null,
+  "title": "Reproduction: Why Are Linear RNNs More Parallelizable?",
+  "emoji": "🔬",
+  "space_id": "DineshAI/29sn1uqWn3",
+  "paper": "29sn1uqWn3",
   "tags": [
     "icml2026-repro",
     "paper-29sn1uqWn3",
     "theory",
     "rnn"
   ],
-  "updated_at": "2026-07-31T02:27:25+00:00",
+  "updated_at": "2026-07-31T00:00:00+00:00",
   "root": {
     "slug": "index",
-    "title": "Repro - Why Are Linear RNNs More Parallelizable?",
+    "title": "Reproduction: Why Are Linear RNNs More Parallelizable?",
     "file": "pages/index.md",
     "children": [
-      {
-        "slug": "release-overview",
-        "title": "Release overview - exact evidence first",
-        "file": "pages/release-overview/page.md",
-        "children": []
-      },
-      {
-        "slug": "current-claim-6",
-        "title": "Current verification - Claim 6",
-        "file": "pages/current-claim-6/page.md",
-        "children": []
-      },
-      {
-        "slug": "current-claim-5",
-        "title": "Current verification - Claim 5",
-        "file": "pages/current-claim-5/page.md",
-        "children": []
-      },
-      {
-        "slug": "current-claim-4",
-        "title": "Current verification - Claim 4",
-        "file": "pages/current-claim-4/page.md",
-        "children": []
-      },
-      {
-        "slug": "current-claim-3",
-        "title": "Current verification - Claim 3",
-        "file": "pages/current-claim-3/page.md",
-        "children": []
-      },
-      {
-        "slug": "current-claim-2",
-        "title": "Current verification - Claim 2",
-        "file": "pages/current-claim-2/page.md",
-        "children": []
-      },
-      {
-        "slug": "current-claim-1",
-        "title": "Current verification - Claim 1",
-        "file": "pages/current-claim-1/page.md",
-        "children": []
-      },
-      {
-        "slug": "overview",
-        "title": "Overview",
-        "file": "pages/overview/page.md",
-        "children": []
-      },
-      {
-        "slug": "claims",
-        "title": "Claims",
-        "file": "pages/claims/page.md",
-        "children": []
-      },
-      {
-        "slug": "evidence",
-        "title": "Evidence",
-        "file": "pages/evidence/page.md",
-        "children": []
-      },
-      {
-        "slug": "verification-run",
-        "title": "Verification run",
-        "file": "pages/verification-run/page.md",
-        "children": []
-      }
+      {"slug":"executive-summary","title":"Executive summary","file":"pages/executive-summary/page.md","children":[]},
+      {"slug":"claim-1","title":"Claim 1","file":"pages/claim-1/page.md","children":[]},
+      {"slug":"claim-2","title":"Claim 2","file":"pages/claim-2/page.md","children":[]},
+      {"slug":"claim-3","title":"Claim 3","file":"pages/claim-3/page.md","children":[]},
+      {"slug":"claim-4","title":"Claim 4","file":"pages/claim-4/page.md","children":[]},
+      {"slug":"claim-5","title":"Claim 5","file":"pages/claim-5/page.md","children":[]},
+      {"slug":"claim-6","title":"Claim 6","file":"pages/claim-6/page.md","children":[]},
+      {"slug":"conclusion","title":"Conclusion","file":"pages/conclusion/page.md","children":[]}
     ]
   },
   "traces": [
@@ -105,9 +47,5 @@
     "file_count": 0,
     "total_size": 0,
     "bucket_id": null
-  },
-  "agent_view_tokens": 997,
-  "trace_view_tokens": 53943,
-  "workspace_view_tokens": 8,
-  "revision": "b0a7f2677de2888d27c3"
+  }
 }

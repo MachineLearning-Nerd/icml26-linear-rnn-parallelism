@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "skill": "posterly",
+  "timestamp": "2026-07-31T03:08:00Z",
+  "poster_html": "/Users/dineshjinjala/.cache/openresearch/worktrees/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/chat_e850b22d-6ad1-41ec-a359-5ba98c2ad98c/poster_embed.html",
+  "canvas": {
+    "source": "page-rule",
+    "width_cm": 152.4,
+    "height_cm": 91.44,
+    "orientation": "landscape",
+    "source_url": null
+  },
+  "overall": "PASS",
+  "hard_failures": 0,
+  "warnings": 0,
+  "soft_advisories": 3,
+  "gates": [
+    {
+      "name": "preflight",
+      "severity": "hard",
+      "status": "PASS",
+      "command": [
+        "/Users/dineshjinjala/.cache/openresearch/worktrees/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/chat_e850b22d-6ad1-41ec-a359-5ba98c2ad98c/.venv/bin/python3",
+        "/private/tmp/Posterly/tools/poster_check.py",
+        "preflight",
+        "/Users/dineshjinjala/.cache/openresearch/worktrees/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/chat_e850b22d-6ad1-41ec-a359-5ba98c2ad98c/poster_embed.html"
+      ],
+      "summary": {
+        "exit_code": 0,
+        "tail": "[preflight] /Users/dineshjinjala/.cache/openresearch/worktrees/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/chat_e850b22d-6ad1-41ec-a359-5ba98c2ad98c/poster_embed.html\n  problems: 0   warnings: 0\n[preflight] PASS"
+      },
+      "artifacts": []
+    },
+    {
+      "name": "style",
+      "severity": "hard",
+      "status": "PASS",
+      "command": [
+        "/Users/dineshjinjala/.cache/openresearch/worktrees/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/chat_e850b22d-6ad1-41ec-a359-5ba98c2ad98c/.venv/bin/python3",
+        "/private/tmp/Posterly/tools/style_check.py",
+        "/Users/dineshjinjala/.cache/openresearch/worktrees/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/chat_e850b22d-6ad1-41ec-a359-5ba98c2ad98c/poster_embed.html",
+        "--tokens",
+        "/Users/dineshjinjala/.cache/openresearch/worktrees/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/chat_e850b22d-6ad1-41ec-a359-5ba98c2ad98c/design_tokens.json",
+        "--disable",
+        "4,5",
+        "--json",
+        "/Users/dineshjinjala/.cache/openresearch/worktrees/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/chat_e850b22d-6ad1-41ec-a359-5ba98c2ad98c/style_check.json"
+      ],
+      "summary": {
+        "gate": "style",
+        "status": "PASS",
+        "rules": [
+          {
+            "id": 1,
+            "severity": "hard",
+            "status": "PASS",
+            "detail": "ok"
+          },
+          {
+            "id": 2,
+            "severity": "hard",
+            "status": "PASS",
+            "detail": "ok"
+          },
+          {
+            "id": 3,
+            "severity": "hard",
+            "status": "PASS",
+            "detail": "ok"
+          },
+          {
+            "id": 4,
+            "severity": "hard",
+            "status": "SKIPPED",
+            "detail": "disabled via --disable (rule 4)"
+          },
+          {
+            "id": 5,
+            "severity": "hard",
+            "status": "SKIPPED",
+            "detail": "disabled via --disable (rule 5)"
+          },
+          {
+            "id": 6,
+            "severity": "hard",
+            "status": "PASS",
+            "detail": "ok"
+          },
+          {
+            "id": 7,
+            "severity": "hard",
+            "status": "PASS",
+            "detail": "ok"
+          },
+          {
+            "id": 8,
+            "severity": "hard",
+            "status": "PASS",
+            "detail": "ok"
+          },
+          {
+            "id": 9,
+            "severity": "warn",
+            "status": "PASS",
+            "detail": "9 --fs-* token(s) defined"
+          },
+          {
+            "id": 10,
+            "severity": "hard",
+            "status": "PASS",
+            "detail": "ok"
+          },
+          {
+            "id": 11,
+            "severity": "hard",
+            "status": "PASS",
+            "detail": "ok"
+          },
+          {
+            "id": 12,
+            "severity": "warn",
+            "status": "PASS",
+            "detail": "dark_ground declared in --tokens: deliberate dark-ground theme, whole-page dark-area warning waived (summed dark-element coverage = 393.8% of poster area; nested dark blocks double-count, so this can exceed 100%)"
+          },
+          {
+            "id": 13,
+            "severity": "hard",
+            "status": "PASS",
+            "detail": "ok"
+          },
+          {
+            "id": 14,
+            "severity": "hard",
+            "status": "PASS",
+            "detail": "ok"
+          }
+        ]
+      },
+      "artifacts": [
+        "/Users/dineshjinjala/.cache/openresearch/worktrees/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/chat_e850b22d-6ad1-41ec-a359-5ba98c2ad98c/style_check.json"
+      ]
+    },
+    {
+      "name": "asset",
+      "severity": "hard",
+      "status": "NOT_RUN",
+      "command": [],
+      "summary": {
+        "not_run": "no --manifest: real-figure provenance gate opted out (NOT verified)"
+      },
+      "artifacts": []
+    },
+    {
+      "name": "measure",
+      "severity": "hard",
+      "status": "PASS",
+      "command": [
+        "/Users/dineshjinjala/.cache/openresearch/worktrees/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/chat_e850b22d-6ad1-41ec-a359-5ba98c2ad98c/.venv/bin/python3",
+        "/private/tmp/Posterly/tools/poster_check.py",
+        "measure",
+        "/Users/dineshjinjala/.cache/openresearch/worktrees/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/chat_e850b22d-6ad1-41ec-a359-5ba98c2ad98c/poster_embed.html"
+      ],
+      "summary": {
+        "exit_code": 0,
+        "tail": "[measure] columns found: 4\n  col0    last-card-bottom =  3289.70 px\n  col1    last-card-bottom =  3289.70 px\n  col2    last-card-bottom =  3289.70 px\n  col3    last-card-bottom =  3289.70 px\n  spread = 0.00 px   (target < 5.0 px)\n  gap -> footer in [30.23, 30.23] px   (target [30.0, 50.0])\n[measure] PASS"
+      },
+      "artifacts": []
+    },
+    {
+      "name": "polish",
+      "severity": "soft",
+      "status": "PASS",
+      "command": [
+        "/Users/dineshjinjala/.cache/openresearch/worktrees/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/chat_e850b22d-6ad1-41ec-a359-5ba98c2ad98c/.venv/bin/python3",
+        "/private/tmp/Posterly/tools/poster_check.py",
+        "polish",
+        "/Users/dineshjinjala/.cache/openresearch/worktrees/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/chat_e850b22d-6ad1-41ec-a359-5ba98c2ad98c/poster_embed.html"
+      ],
+      "summary": {
+        "exit_code": 0,
+        "tail": "  flex/<br> parents   : 0\n  header logos        : 0\n  banner images       : 0\n  warnings            : 3\n  WARN: WIDOW: <span class=''> wraps to a stranded last line that fills only 12% of the typeset width ('seeds.'), a runt (SKILL.md Gate B) (unlisted block type, judged by the single-stranded-word bar; a lone stranded word reads wrong in ANY block). Fix by REWORDING first: expand or trim a few words so the break lands on a phrase boundary and the last line carries more of the measure (if alignment is already tuned, swap a word for a longer synonym to keep the line count). On a CENTERED heading/title use text-wrap: balance instead. &nbsp;-glue is a LAST RESORT for a leading marker or a tight stat cell only -- glue at most two tokens; never chain more (a fused multi-word unit wraps early and tears a hole in the line above -- the GLUE-CHAIN gate flags it). Context: 'Dimensions 1\\u20133, eleven horizons, four deterministic seeds.'.\n  WARN: WIDOW: <span class=''> wraps to a stranded last line that fills only 12% of the typeset width ('matrix.'), a runt (SKILL.md Gate B) (unlisted block type, judged by the single-stranded-word bar; a lone stranded word reads wrong in ANY block). Fix by REWORDING first: expand or trim a few words so the break lands on a phrase boundary and the last line carries more of the measure (if alignment is already tuned, swap a word for a longer synonym to keep the line count). On a CENTERED heading/title use text-wrap: balance instead. &nbsp;-glue is a LAST RESORT for a leading marker or a tight stat cell only -- glue at most two tokens; never chain more (a fused multi-word unit wraps early and tears a hole in the line above -- the GLUE-CHAIN gate flags it). Context: '...ffine step is lifted to a fixed-width homogeneous matrix.'.\n  WARN: WIDOW: <span class=''> wraps to a stranded last line that fills only 21% of the typeset width ('examples.'), a runt (SKILL.md Gate B) (unlisted block type, judged by the single-stranded-word bar; a lone stranded word reads wrong in ANY block). Fix by REWORDING first: expand or trim a few words so the break lands on a phrase boundary and the last line carries more of the measure (if alignment is already tuned, swap a word for a longer synonym to keep the line count). On a CENTERED heading/title use text-wrap: balance instead. &nbsp;-glue is a LAST RESORT for a leading marker or a tight stat cell only -- glue at most two tokens; never chain more (a fused multi-word unit wraps early and tears a hole in the line above -- the GLUE-CHAIN gate flags it). Context: 'Evaluate the sole released checkpoint on 90,000 examples.'.\n[polish] OK (warnings only)"
+      },
+      "artifacts": [],
+      "advisories": 3,
+      "advisory_lines": [
+        "WARN: WIDOW: <span class=''> wraps to a stranded last line that fills only 12% of the typeset width ('seeds.'), a runt (SKILL.md Gate B) (unlisted block type, judged by the single-stranded-word bar; a lone stranded word reads wrong in ANY block). Fix by REWORDING first: expand or trim a few words so the break lands on a phrase boundary and the last line carries more of the measure (if alignment is already tuned, swap a word for a longer synonym to keep the line count). On a CENTERED heading/title use text-wrap: balance instead. &nbsp;-glue is a LAST RESORT for a leading marker or a tight stat cell only -- glue at most two tokens; never chain more (a fused multi-word unit wraps early and tears a hole in the line above -- the GLUE-CHAIN gate flags it). Context: 'Dimensions 1\\u20133, eleven horizons, four deterministic seeds.'.",
+        "WARN: WIDOW: <span class=''> wraps to a stranded last line that fills only 12% of the typeset width ('matrix.'), a runt (SKILL.md Gate B) (unlisted block type, judged by the single-stranded-word bar; a lone stranded word reads wrong in ANY block). Fix by REWORDING first: expand or trim a few words so the break lands on a phrase boundary and the last line carries more of the measure (if alignment is already tuned, swap a word for a longer synonym to keep the line count). On a CENTERED heading/title use text-wrap: balance instead. &nbsp;-glue is a LAST RESORT for a leading marker or a tight stat cell only -- glue at most two tokens; never chain more (a fused multi-word unit wraps early and tears a hole in the line above -- the GLUE-CHAIN gate flags it). Context: '...ffine step is lifted to a fixed-width homogeneous matrix.'.",
+        "WARN: WIDOW: <span class=''> wraps to a stranded last line that fills only 21% of the typeset width ('examples.'), a runt (SKILL.md Gate B) (unlisted block type, judged by the single-stranded-word bar; a lone stranded word reads wrong in ANY block). Fix by REWORDING first: expand or trim a few words so the break lands on a phrase boundary and the last line carries more of the measure (if alignment is already tuned, swap a word for a longer synonym to keep the line count). On a CENTERED heading/title use text-wrap: balance instead. &nbsp;-glue is a LAST RESORT for a leading marker or a tight stat cell only -- glue at most two tokens; never chain more (a fused multi-word unit wraps early and tears a hole in the line above -- the GLUE-CHAIN gate flags it). Context: 'Evaluate the sole released checkpoint on 90,000 examples.'."
+      ]
+    }
+  ]
+}

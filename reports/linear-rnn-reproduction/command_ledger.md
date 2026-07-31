@@ -49,6 +49,7 @@ b147fc79-8d1f-4ddf-811b-254196e18d9e
 614b8914-1f6d-49e3-8ee4-751bd61d8c96
 1870e050-4855-4cff-90ed-a16ddf7de3d1
 3722216e-11a8-4b94-8c21-80922a99e902
+18bcc462-fbed-4e4b-8af2-9295100aff38
 ```
 
 ## Local short validations
@@ -57,6 +58,12 @@ b147fc79-8d1f-4ddf-811b-254196e18d9e
 uv run python -m py_compile repro/src/claim6_falsification.py repro/src/claim6_proof.py repro/src/claim6_release_audit.py repro/src/verify.py
 uv run marimo check notebooks/linear_rnn_reproduction.py
 xmllint --noout reports/linear-rnn-reproduction/images/*.svg
+uv add --dev playwright
+uv run playwright install chromium
+uv run python /tmp/Posterly/tools/poster_check.py pack poster_embed.html
+uv run python /tmp/Posterly/tools/run_gates.py poster_embed.html --tokens design_tokens.json --report GATE_REPORT.json
+uv run python /tmp/Posterly/tools/render_preview.py poster_embed.html
+python3 /tmp/validate_icml_logbook.py --space DineshAI/repro-why-are-linear-rnns-more-parallelizable
 release/build_candidate.sh <judged-dir> <fresh-candidate-dir> <allowlist> <manifest>
 uv run python repro/src/audit_space_candidate.py <candidate-dir> <judged-dir> <allowlist>
 ```

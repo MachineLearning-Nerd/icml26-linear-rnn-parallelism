@@ -1,0 +1,17 @@
+{
+  "status": "BLOCKED",
+  "contract": "Train nonlinear RNN, Transformer, Mamba, RWKV-7, and DeltaNet with the Figure 2 protocol and compare held-out length accuracies.",
+  "constructive_length_bands": {
+    "1-100": {"correct":300,"total":300},
+    "101-200": {"correct":300,"total":300},
+    "201-300": {"correct":300,"total":300}
+  },
+  "complete_domain_instances": 29367,
+  "nonlinear_correct": 29367,
+  "nonlinear_accuracy": 1.0,
+  "linearized_correct": 24085,
+  "linearized_accuracy": 0.8201382504171348,
+  "majority_correct": 24328,
+  "majority_accuracy": 0.8284128443490993,
+  "formal_run": "../formal_run.json"
+}

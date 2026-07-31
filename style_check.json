@@ -1,0 +1,90 @@
+{
+  "gate": "style",
+  "status": "PASS",
+  "rules": [
+    {
+      "id": 1,
+      "severity": "hard",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "id": 2,
+      "severity": "hard",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "id": 3,
+      "severity": "hard",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "id": 4,
+      "severity": "hard",
+      "status": "SKIPPED",
+      "detail": "disabled via --disable (rule 4)"
+    },
+    {
+      "id": 5,
+      "severity": "hard",
+      "status": "SKIPPED",
+      "detail": "disabled via --disable (rule 5)"
+    },
+    {
+      "id": 6,
+      "severity": "hard",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "id": 7,
+      "severity": "hard",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "id": 8,
+      "severity": "hard",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "id": 9,
+      "severity": "warn",
+      "status": "PASS",
+      "detail": "9 --fs-* token(s) defined"
+    },
+    {
+      "id": 10,
+      "severity": "hard",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "id": 11,
+      "severity": "hard",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "id": 12,
+      "severity": "warn",
+      "status": "PASS",
+      "detail": "dark_ground declared in --tokens: deliberate dark-ground theme, whole-page dark-area warning waived (summed dark-element coverage = 393.8% of poster area; nested dark blocks double-count, so this can exceed 100%)"
+    },
+    {
+      "id": 13,
+      "severity": "hard",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "id": 14,
+      "severity": "hard",
+      "status": "PASS",
+      "detail": "ok"
+    }
+  ]
+}

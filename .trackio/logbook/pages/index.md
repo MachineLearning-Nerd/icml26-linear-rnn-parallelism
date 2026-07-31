@@ -1,25 +1,14 @@
-# Repro - Why Are Linear RNNs More Parallelizable?
+# Reproduction: Why Are Linear RNNs More Parallelizable?
 
-## Current evidence
+## Pages
 
-| Page |
-| --- |
-| [Release overview - exact evidence first](#/release-overview) |
-| [Current verification - Claim 6](#/current-claim-6) |
-| [Current verification - Claim 5](#/current-claim-5) |
-| [Current verification - Claim 4](#/current-claim-4) |
-| [Current verification - Claim 3](#/current-claim-3) |
-| [Current verification - Claim 2](#/current-claim-2) |
-| [Current verification - Claim 1](#/current-claim-1) |
-
-## Historical rejected baseline
-
-The pages below preserve the exact judged revision. Their finite examples are
-toy corroboration, not current full-claim verification.
-
-| Preserved page |
-| --- |
-| [Historical rejected baseline - Overview](#/overview) |
-| [Historical rejected baseline - Claims](#/claims) |
-| [Historical rejected baseline - Evidence](#/evidence) |
-| [Historical rejected baseline - Verification run](#/verification-run) |
+| Page | What it contains |
+| --- | --- |
+| [Executive summary](#/executive-summary) | Pinned result, scope, cost, and poster |
+| [Claim 1](#/claim-1) | Exact rational LRNN scan and PNC¹ certificate |
+| [Claim 2](#/claim-2) | Exact depth recurrence and Boolean-simulation audit |
+| [Claim 3](#/claim-3) | Complete sorted-DGC domain through six vertices |
+| [Claim 4](#/claim-4) | Exact stack, language, and monotone-CVP checks |
+| [Claim 5](#/claim-5) | RWKV/DeltaNet arithmetic and unresolved router |
+| [Claim 6](#/claim-6) | Figure 2 release audit and expressivity ablation |
+| [Conclusion](#/conclusion) | Verdicts, visibility matrix, and limitations |

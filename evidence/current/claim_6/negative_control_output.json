@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "control": "remove integer-exact ReLU zero tests",
+  "linearized_correct": 24085,
+  "majority_correct": 24328,
+  "total": 29367
+}

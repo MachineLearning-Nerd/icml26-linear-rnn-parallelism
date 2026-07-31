@@ -1,0 +1,15 @@
+{
+  "status": "BLOCKED",
+  "contract": "One fixed four-layer RWKV-7 and one fixed four-layer DeltaNet compute every iterated 3x3 product over the stated rational architectures.",
+  "rwkv_products": 280,
+  "rwkv_lengths": [1,2,3,5,8,13,21],
+  "rwkv_max_abs_error": "0",
+  "deltanet_products": 75,
+  "deltanet_lengths": [1,2,3,5,8],
+  "deltanet_h_steps_per_matrix": 694,
+  "deltanet_max_abs_error": "0",
+  "transvection_cases": 98,
+  "required_router_period": 1404,
+  "euler_phi": 432,
+  "formal_run": "../formal_run.json"
+}

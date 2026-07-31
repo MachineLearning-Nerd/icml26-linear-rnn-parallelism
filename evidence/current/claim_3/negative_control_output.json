@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "control": "remove the nonzero-index guard",
+  "domain": "all 3000 source/target instances at k=5",
+  "observed_errors": 636
+}
