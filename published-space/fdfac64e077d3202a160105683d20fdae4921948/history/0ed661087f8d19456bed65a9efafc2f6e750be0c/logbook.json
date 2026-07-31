@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "title": "Repro - Why Are Linear RNNs More Parallelizable?",
+  "emoji": "🎯",
+  "space_id": "DineshAI/29sn1uqWn3",
+  "paper": null,
+  "tags": [
+    "icml2026-repro",
+    "paper-29sn1uqWn3",
+    "theory",
+    "rnn"
+  ],
+  "updated_at": "2026-07-30T18:00:00+00:00",
+  "root": {
+    "slug": "index",
+    "title": "Repro - Why Are Linear RNNs More Parallelizable?",
+    "file": "pages/index.md",
+    "children": [
+      {
+        "slug": "release-overview",
+        "title": "Release overview - exact evidence first",
+        "file": "pages/release-overview/page.md",
+        "children": []
+      },
+      {
+        "slug": "current-claim-6",
+        "title": "Current verification - Claim 6",
+        "file": "pages/current-claim-6/page.md",
+        "children": []
+      },
+      {
+        "slug": "current-claim-5",
+        "title": "Current verification - Claim 5",
+        "file": "pages/current-claim-5/page.md",
+        "children": []
+      },
+      {
+        "slug": "current-claim-4",
+        "title": "Current verification - Claim 4",
+        "file": "pages/current-claim-4/page.md",
+        "children": []
+      },
+      {
+        "slug": "current-claim-3",
+        "title": "Current verification - Claim 3",
+        "file": "pages/current-claim-3/page.md",
+        "children": []
+      },
+      {
+        "slug": "current-claim-2",
+        "title": "Current verification - Claim 2",
+        "file": "pages/current-claim-2/page.md",
+        "children": []
+      },
+      {
+        "slug": "current-claim-1",
+        "title": "Current verification - Claim 1",
+        "file": "pages/current-claim-1/page.md",
+        "children": []
+      },
+      {
+        "slug": "overview",
+        "title": "Historical rejected baseline - Overview",
+        "file": "pages/overview/page.md",
+        "children": []
+      },
+      {
+        "slug": "claims",
+        "title": "Historical rejected baseline - Claims",
+        "file": "pages/claims/page.md",
+        "children": []
+      },
+      {
+        "slug": "evidence",
+        "title": "Historical rejected baseline - Evidence",
+        "file": "pages/evidence/page.md",
+        "children": []
+      },
+      {
+        "slug": "verification-run",
+        "title": "Historical rejected baseline - Verification run",
+        "file": "pages/verification-run/page.md",
+        "children": []
+      }
+    ]
+  },
+  "agent_view_tokens": 632,
+  "revision": "1785326327435712546"
+}

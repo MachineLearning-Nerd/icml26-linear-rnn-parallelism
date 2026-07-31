@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "status": "VERIFIED",
+  "checks": ["complete exact stack domain", "deep stack roundtrip", "complete bounded language domain", "complete assignments for seeded monotone circuits"],
+  "verifier": "repro/src/verify.py"
+}

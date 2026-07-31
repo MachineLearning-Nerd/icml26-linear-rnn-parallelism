@@ -29,6 +29,10 @@ each canonical claim page.
 
 [Read the illustrated report](reports/linear-rnn-reproduction/report.md) or
 [open the self-contained tutorial notebook](notebooks/linear_rnn_reproduction.py).
+The evaluator-facing artifact is published at
+[Hugging Face revision `fdfac64e`](https://huggingface.co/spaces/DineshAI/29sn1uqWn3/tree/fdfac64e077d3202a160105683d20fdae4921948);
+the [exact 62-file text snapshot](published-space/fdfac64e077d3202a160105683d20fdae4921948/README.md)
+and its SHA-256 manifests are mirrored in this repository.
 
 [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/blob/main/notebooks/linear_rnn_reproduction.py)
 
@@ -56,6 +60,7 @@ formal node inherited the exact command shown below.
 | [`orx/c6-generator-repair-sensitivity-audit`](https://github.com/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/tree/orx/c6-generator-repair-sensitivity-audit) | 270k repaired examples | `uv run python repro/src/verify.py` | Shortcut collapses to 50.00-54.83% | HF cpu-upgrade, 249s |
 | [`orx/c6-exact-assumption-falsification-qualification`](https://github.com/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/tree/orx/c6-exact-assumption-falsification-qualification) | Mandatory falsification route | `uv run python repro/src/verify.py` | No qualified counterexample; BLOCKED | HF cpu-upgrade, 291s |
 | [`orx/exact-arithmetic-and-exhaustive-theory-audits`](https://github.com/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/tree/orx/exact-arithmetic-and-exhaustive-theory-audits) | Match the strongest live judged exact checks and rerun every prior audit | `uv run python repro/src/verify.py` | C1–4 VERIFIED; C5–6 BLOCKED | HF cpu-upgrade, 1129.264s verifier |
+| [`orx/canonical-evaluator-visible-10-point-candidate`](https://github.com/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/tree/orx/canonical-evaluator-visible-10-point-candidate) | Final cumulative regression of the published candidate | `uv run python repro/src/verify.py` | Suite passed at `467a72b`; C1–4 VERIFIED, C5–6 BLOCKED | HF cpu-upgrade, 599.512s verifier |
 
 Previous live judged score: `4/12`. Conservative forecast after publication:
 `9-11/12`; best-supported possible score: `11/12`. These are forecasts only. The

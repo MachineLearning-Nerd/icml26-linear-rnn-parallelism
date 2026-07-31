@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
+  <rect width="1200" height="560" fill="#fff"/>
+  <text x="55" y="52" fill="#111827" font-family="sans-serif" font-size="30" font-weight="700">One stacked lineage; every child reruns accepted evidence</text>
+  <path d="M120 120 L1080 120" stroke="#cbd5e1" stroke-width="6"/>
+  <path d="M1080 120 L1080 400" stroke="#cbd5e1" stroke-width="6"/>
+  <g font-family="sans-serif" text-anchor="middle">
+    <g fill="#dbeafe" stroke="#3b82f6" stroke-width="2">
+      <circle cx="120" cy="120" r="42"/><circle cx="300" cy="120" r="42"/><circle cx="480" cy="120" r="42"/>
+      <circle cx="660" cy="120" r="42"/><circle cx="840" cy="120" r="42"/><circle cx="1020" cy="120" r="42"/>
+    </g>
+    <g fill="#1e3a8a" font-size="17" font-weight="700">
+      <text x="120" y="116">Baseline</text><text x="120" y="138">5/12</text>
+      <text x="300" y="126">C1</text><text x="480" y="126">C2</text><text x="660" y="126">C3</text><text x="840" y="126">C4</text><text x="1020" y="126">C5</text>
+    </g>
+    <g fill="#fef3c7" stroke="#f59e0b" stroke-width="2">
+      <rect x="940" y="200" width="140" height="55" rx="10"/><rect x="940" y="275" width="140" height="55" rx="10"/>
+      <rect x="940" y="350" width="140" height="55" rx="10"/><rect x="940" y="425" width="140" height="55" rx="10"/>
+    </g>
+    <g fill="#92400e" font-size="16" font-weight="700">
+      <text x="1010" y="233">C6 release</text><text x="1010" y="308">checkpoint</text>
+      <text x="1010" y="383">generator repair</text><text x="1010" y="458">falsification</text>
+    </g>
+  </g>
+  <text x="55" y="525" fill="#4b5563" font-family="sans-serif" font-size="18">Fixed command throughout: uv run python repro/src/verify.py</text>
+</svg>

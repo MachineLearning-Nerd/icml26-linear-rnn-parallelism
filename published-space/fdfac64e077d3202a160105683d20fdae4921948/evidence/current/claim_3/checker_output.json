@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "status": "VERIFIED",
+  "checks": ["complete graph enumeration", "independent pointer walk", "counter machine", "ReLU realization", "FO-reduction certificate"],
+  "verifier": "repro/src/verify.py"
+}

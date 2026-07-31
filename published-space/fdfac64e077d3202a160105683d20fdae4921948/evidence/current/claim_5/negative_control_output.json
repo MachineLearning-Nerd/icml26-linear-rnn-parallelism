@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "control": "replace transvection coefficient 1/2 with 1/4",
+  "expected": "nonzero exact error",
+  "observed": "nonzero exact error"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "VERIFIED",
+  "contract": "Exact affine LRNN recurrence compiles to an associative bounded-width matrix product whose balanced evaluation has ceil(log2 n) depth.",
+  "sequential_vs_balanced_cases": 132,
+  "depth_matches": 132,
+  "convolution_cases": 50,
+  "max_abs_error": "0",
+  "convolution_max_abs_error": "0",
+  "seed_policy": "deterministic seeds 1000*dimension + 100*length + seed",
+  "formal_run": "../formal_run.json"
+}

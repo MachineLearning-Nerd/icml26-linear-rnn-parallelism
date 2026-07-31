@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "control": "use the appendix's printed rational-addition denominator",
+  "printed_denominator": 2,
+  "correct_denominator": 6,
+  "observed": "rejected"
+}

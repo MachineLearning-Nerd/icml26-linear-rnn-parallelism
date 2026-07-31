@@ -1,0 +1,11 @@
+{
+  "status": "VERIFIED",
+  "contract": "The one-pass counter machine and integer-exact ReLU realization solve every sorted deterministic graph instance in the complete k<=6 domain.",
+  "instances_by_vertices": {"1":1,"2":8,"3":54,"4":384,"5":3000,"6":25920},
+  "total_instances": 29367,
+  "counter_machine_matches": 29367,
+  "relu_rnn_matches": 29367,
+  "ground_truth_disagreements": 0,
+  "long_horizons": [100,200,300],
+  "formal_run": "../formal_run.json"
+}

@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "control": "replace AND=ReLU(a+b-1) with AND=ReLU(a+b-2)",
+  "domain": "all 16 assignments of a fixed four-input circuit",
+  "observed_errors": 5
+}
