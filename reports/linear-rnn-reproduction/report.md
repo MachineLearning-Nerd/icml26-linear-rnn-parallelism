@@ -183,7 +183,7 @@ negative results about the published proof and release, but neither crosses the
 standard for `FALSIFIED`.
 
 The exact-evidence scientific node is
-[`orx/exact-arithmetic-and-exhaustive-theory-audits`](https://github.com/MachineLearning-Nerd/icml26-repro-29sn1uqWn3-linear-rnn-parallelism/tree/orx/exact-arithmetic-and-exhaustive-theory-audits)
+[`audit/exact-arithmetic-theory`](https://github.com/MachineLearning-Nerd/icml26-linear-rnn-parallelism/tree/audit/exact-arithmetic-theory)
 at `f9a8331fd1deadaef45c02d7399ac116562bac4e`. The canonical publication child
 adds navigation and visible artifacts without changing those scientific
 results. The live judge alone can change the score.
