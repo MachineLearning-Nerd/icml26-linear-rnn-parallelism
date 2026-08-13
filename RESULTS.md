@@ -1,26 +1,25 @@
 # Results
 
-Run the complete CPU verification with:
+Run the current CPU campaign with:
 
 ```bash
-python3 repro/src/verify.py
+uv sync
+uv run python repro/src/verify.py
 ```
 
-All five anchored theorem/construction claims pass. The machine-readable
-evidence is in [`outputs/verdict.json`](outputs/verdict.json).
+| Claim | Current result | Primary route | Control / limitation |
+| --- | --- | --- | --- |
+| C1 | VERIFIED | 132 exact affine scans and 50 convolution identities | Nonassociative/false-convolution controls; universal `PNC¹` theorem remains source-anchored |
+| C2 | VERIFIED | 22 depth points, log-star boundaries, corrected rational gates | Left-to-right depth and printed denominator controls |
+| C3 | VERIFIED | 29,367 complete graph instances through six vertices | Guard removal yields 636 errors; complexity barrier is conditional |
+| C4 | VERIFIED | 32,767 stacks, 29,524 bounded strings, 1,568 CVP assignments | Printed base-2 margin rejected; corrected base-4 route checked |
+| C5 | BLOCKED | 280 RWKV and 75 DeltaNet exact products; 98 transvections | Four-route audit leaves the fixed rational DeltaNet router unresolved |
+| C6 | BLOCKED | 29,367-instance expressivity ablation and four release routes | No faithful five-model Figure 2 training package |
 
-| Claim | Executable construction audit | Negative control |
-|---|---|---|
-| C1 | Exact LRNN recurrence equals the source convolutional matrix-product form across 288 instances | A nonlinear update cannot use the same distributive linear form |
-| C2 | Balanced associative product trees and the `O(log n log* n)` schedule | A left-to-right scan has linear depth |
-| C3 | Sorted deterministic graph connectivity counter scan against independent pointer reachability | An unsorted edge order defeats a one-pass scan |
-| C4 | Literal scalar stack `head`/`push`/`pop` encoding used by the multi-stack proof | Fixed precision collapses distinct sufficiently deep stacks |
-| C5 | Alternating-half 18-state RWKV arithmetic plus an independent WFA path-sum check | In-place coordinate writes corrupt the matrix product |
+The current run used one algorithm thread on HF `cpu-upgrade`, with 64 visible
+CPUs, 1129.264233 seconds, and no GPU. These are local reproduction results,
+not an external evaluator score.
 
-## Scope
-
-This is a source-faithful theory reproduction. It checks the complete finite
-constructions used in the authors’ proofs, not the un-released neural-training
-experiment. No finite program is presented as a proof of a complexity-class
-separation; those universal statements are anchored to the primary-source TeX
-proofs.
+The published candidate records 4/12; the archived judged-baseline lineage
+records 5/12. Both are retained as historical snapshots, and no new score is
+claimed here.
