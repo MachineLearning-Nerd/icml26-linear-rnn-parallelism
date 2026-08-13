@@ -38,7 +38,7 @@ judged baseline
 ```
 
 Winning scientific branch:
-`orx/exact-arithmetic-and-exhaustive-theory-audits`.
+`audit/exact-arithmetic-theory`.
 
 Winning scientific Git SHA:
 `f9a8331fd1deadaef45c02d7399ac116562bac4e`.
