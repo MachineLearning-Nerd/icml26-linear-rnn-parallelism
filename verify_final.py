@@ -67,7 +67,7 @@ def main() -> None:
         "claim_6": "BLOCKED",
     }:
         raise SystemExit("current formal run statuses are inconsistent")
-    if run["suite_passed"] is not True or run["gpu_used"] is not False:
+    if run["suite_passed"] is not True or run["compute"]["gpu_used"] is not False:
         raise SystemExit("current formal run gate is inconsistent")
     if verdicts["historical_scores"]["published_candidate"]["points"] != 4:
         raise SystemExit("published historical score is inconsistent")
