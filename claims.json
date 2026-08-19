@@ -1,0 +1,57 @@
+{
+  "schema_version": "1",
+  "paper": "Why Are Linear RNNs More Parallelizable?",
+  "paper_source": "arXiv:2603.03612",
+  "openreview_id": "29sn1uqWn3",
+  "overall_status": "PARTIAL_C1_C4_VERIFIED_SCOPED_C5_C6_BLOCKED_HISTORICAL_SCORE_4_OF_12_ARCHIVED_BASELINE_5_OF_12_NO_CURRENT_SCORE",
+  "claims": [
+    {
+      "id": "C1",
+      "status": "VERIFIED_SCOPED",
+      "paper_anchor": "Theorem 3; Section 4 convolutional form",
+      "production_path": "repro/src/claim1_proof.py; repro/src/claim1_independent.py; evidence/current/claim_1/",
+      "negative_control": "reversing noncommuting transition order produces nonzero exact error",
+      "scope": "finite exact affine composition, balanced resource recurrence, and convolution identities"
+    },
+    {
+      "id": "C2",
+      "status": "VERIFIED_SCOPED",
+      "paper_anchor": "Corollary 5; Section 4",
+      "production_path": "repro/src/claim2_proof.py; repro/src/claim2_independent.py; evidence/current/claim_2/",
+      "negative_control": "left-to-right depth and the printed rational-addition denominator are rejected",
+      "scope": "finite exact balanced depth, log-star boundaries, corrected gates, and bit growth"
+    },
+    {
+      "id": "C3",
+      "status": "VERIFIED_SCOPED",
+      "paper_anchor": "Theorem 2; Proposition 2; Corollary 4",
+      "production_path": "repro/src/claim3_proof.py; repro/src/claim3_independent.py; evidence/current/claim_3/",
+      "negative_control": "removing the nonzero-index guard creates 636 errors",
+      "scope": "complete sorted deterministic graph domain through six vertices; complexity consequence conditional"
+    },
+    {
+      "id": "C4",
+      "status": "VERIFIED_SCOPED",
+      "paper_anchor": "Theorem 1; Corollary 2; Appendix A",
+      "production_path": "repro/src/claim4_proof.py; repro/src/claim4_independent.py; evidence/current/claim_4/",
+      "negative_control": "wrong-AND construction creates five errors on the fixed circuit domain",
+      "scope": "corrected base-4 stack and bounded language/CVP construction; printed base-2 route rejected"
+    },
+    {
+      "id": "C5",
+      "status": "BLOCKED",
+      "paper_anchor": "Theorem 5; Section 5.1; Appendices B.3/B.5",
+      "production_path": "repro/src/claim5_proof.py; repro/src/claim5_independent.py; evidence/current/claim_5/",
+      "negative_control": "incorrect transvection coefficient produces nonzero exact error",
+      "scope": "RWKV/DeltaNet arithmetic passes, but the fixed rational four-layer DeltaNet router remains unresolved"
+    },
+    {
+      "id": "C6",
+      "status": "BLOCKED",
+      "paper_anchor": "Figure 2; Section 6; Appendix F",
+      "production_path": "repro/src/claim6_proof.py; evidence/current/claim_6/; reports/linear-rnn-reproduction/",
+      "negative_control": "removing integer-exact ReLU zero tests changes the ablation result",
+      "scope": "released generator/checkpoint and sensitivity audits do not identify a faithful five-model Figure 2 training package"
+    }
+  ]
+}

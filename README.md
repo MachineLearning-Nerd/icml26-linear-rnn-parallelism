@@ -9,6 +9,15 @@ and Ashish Sabharwal.
 - Repository: [MachineLearning-Nerd/icml26-linear-rnn-parallelism](https://github.com/MachineLearning-Nerd/icml26-linear-rnn-parallelism)
 - Published evidence snapshot: [DineshAI/29sn1uqWn3](https://huggingface.co/spaces/DineshAI/29sn1uqWn3)
 
+## Audit record
+
+- Overall status: `PARTIAL_C1_C4_VERIFIED_SCOPED_C5_C6_BLOCKED_HISTORICAL_SCORE_4_OF_12_ARCHIVED_BASELINE_5_OF_12_NO_CURRENT_SCORE`
+- Scope: current six-claim evidence record; the older five-claim outputs are retained as provenance only
+- Current score claim: none; only a fresh evaluator verdict can change the external result
+- Historical scores: published candidate `4/12`; archived judged baseline `5/12`
+- Release gate: ready for review with C1–C4 verified and C5–C6 blocked; author endorsement: not claimed
+- Standard audit surfaces: [CLAIM_EVIDENCE.md](CLAIM_EVIDENCE.md), [REPORT.md](REPORT.md), [STATUS.md](STATUS.md), [SOURCE_AUDIT.md](SOURCE_AUDIT.md), and [verify_final.py](verify_final.py)
+
 ## What the paper studies
 
 The paper compares the parallelizability and expressive power of linear and
@@ -34,7 +43,10 @@ The current six-claim evidence record is:
 `evidence/current/formal_run.json` is the canonical current status. The
 historical `outputs/verdict.json` and `outputs/publication_gate.json` are an
 earlier five-claim publication gate and are retained as provenance; they must
-not be read as overriding the six-claim current record.
+not be read as overriding the six-claim current record. The normalized claim
+and publication records are [`claims.json`](claims.json),
+[`reproduction_verdicts.json`](reproduction_verdicts.json), and
+[`EVIDENCE_MANIFEST.json`](EVIDENCE_MANIFEST.json).
 
 The published candidate records a previous live score of **4/12**. The archived
 judged-baseline lineage records **5/12** for its earlier snapshot. Both records
@@ -84,7 +96,9 @@ broken control.
 
 `main` is the publication surface. The historical mapping and claim routing are
 documented in [`branch-audit.md`](branch-audit.md). Branch names describe the
-evidence role; they are not separate scientific verdicts.
+evidence role; they are not separate scientific verdicts. There are 14 clean
+branches including `main`, and all reachable commits are attributed to
+`MachineLearning-Nerd`.
 
 | Clean branch | Purpose |
 | --- | --- |

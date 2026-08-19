@@ -1,0 +1,40 @@
+{
+  "schema_version": "1",
+  "overall_status": "PARTIAL_C1_C4_VERIFIED_SCOPED_C5_C6_BLOCKED_HISTORICAL_SCORE_4_OF_12_ARCHIVED_BASELINE_5_OF_12_NO_CURRENT_SCORE",
+  "source_scope": "arXiv:2603.03612 / ICML submission 29sn1uqWn3",
+  "cumulative_evidence": "PASS_CURRENT_SUITE_WITH_EXPLICIT_BLOCKERS",
+  "claims": {
+    "C1": "VERIFIED_SCOPED",
+    "C2": "VERIFIED_SCOPED",
+    "C3": "VERIFIED_SCOPED",
+    "C4": "VERIFIED_SCOPED",
+    "C5": "BLOCKED",
+    "C6": "BLOCKED"
+  },
+  "current_run": {
+    "run_id": "18bcc462-fbed-4e4b-8af2-9295100aff38",
+    "job_url": "https://huggingface.co/jobs/DineshAI/6a6c0a0cb36a6516e96a3678",
+    "scientific_git_sha": "f9a8331fd1deadaef45c02d7399ac116562bac4e",
+    "suite_passed": true,
+    "runtime_seconds": 1129.264233395923,
+    "gpu_used": false
+  },
+  "historical_scores": {
+    "published_candidate": {
+      "points": 4,
+      "total": 12,
+      "current_score_claim": false
+    },
+    "archived_judged_baseline": {
+      "points": 5,
+      "total": 12,
+      "current_score_claim": false
+    }
+  },
+  "publication_gate": {
+    "current_review_ready": true,
+    "publication_allowed": false,
+    "official_author_endorsement": false
+  },
+  "boundary": "Claims 1-4 validate exact constructions and controls within explicit finite/source-anchored scopes. Claim 5 remains blocked by the unresolved router lemma; Claim 6 remains blocked by missing faithful five-model training identity."
+}

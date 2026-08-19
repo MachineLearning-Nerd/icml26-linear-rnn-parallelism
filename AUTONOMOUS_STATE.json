@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "paper_source": "arXiv:2603.03612",
+  "openreview_id": "29sn1uqWn3",
+  "phase": "current_six_claim_audit_complete_with_two_blockers",
+  "overall_status": "PARTIAL_C1_C4_VERIFIED_SCOPED_C5_C6_BLOCKED_HISTORICAL_SCORE_4_OF_12_ARCHIVED_BASELINE_5_OF_12_NO_CURRENT_SCORE",
+  "next_action": "retain C5 and C6 as blocked and wait for a fresh evaluator result or missing source artifacts; do not promote proxy evidence",
+  "current_score_claim": false,
+  "publication_allowed": false,
+  "official_author_endorsement": false,
+  "current_run": {
+    "run_id": "18bcc462-fbed-4e4b-8af2-9295100aff38",
+    "job_url": "https://huggingface.co/jobs/DineshAI/6a6c0a0cb36a6516e96a3678",
+    "scientific_git_sha": "f9a8331fd1deadaef45c02d7399ac116562bac4e",
+    "statuses": {
+      "C1": "VERIFIED_SCOPED",
+      "C2": "VERIFIED_SCOPED",
+      "C3": "VERIFIED_SCOPED",
+      "C4": "VERIFIED_SCOPED",
+      "C5": "BLOCKED",
+      "C6": "BLOCKED"
+    },
+    "runtime_seconds": 1129.264233395923,
+    "gpu_used": false
+  },
+  "historical_scores": {
+    "published_candidate": "4/12",
+    "archived_judged_baseline": "5/12"
+  },
+  "source": {
+    "arxiv_source_archive_sha256": "f1078eb9464172f9a941c1dd95354116ae749d64b91ec29947b47a588d2a1f9f"
+  },
+  "repository_identity": {
+    "owner": "MachineLearning-Nerd",
+    "canonical_email": "MachineLearning-Nerd@users.noreply.github.com",
+    "recovery_bundle_sha256": "92f82c40b76686d8d9e327d70a63273e76d8b8866eb25298c0cc4b88c557c4f4"
+  },
+  "github_repository": "https://github.com/MachineLearning-Nerd/icml26-linear-rnn-parallelism"
+}
